@@ -1,0 +1,9 @@
+Coderift Security Policy
+
+1. Only authorized employees can modify ticket data.
+2. Customers cannot directly update ticket status.
+3. Every write operation must be validated by the server.
+4. Invalid requests must be rejected.
+5. Sensitive customer information must never be exposed.
+6. All updates should be recorded for auditing purposes.
+7. Unauthorized write requests must return an access denied error.

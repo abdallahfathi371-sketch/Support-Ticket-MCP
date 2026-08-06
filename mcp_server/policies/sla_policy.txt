@@ -1,0 +1,15 @@
+Coderift Service Level Agreement (SLA)
+
+High Priority
+- First response within 1 hour.
+- Resolution target within 24 hours.
+
+Medium Priority
+- First response within 4 hours.
+- Resolution target within 3 business days.
+
+Low Priority
+- First response within 24 hours.
+- Resolution target within 5 business days.
+
+Support is available Monday to Friday during business hours.
