@@ -1,0 +1,5 @@
+Strategy,Accuracy,Average Tokens,Average Latency
+Sliding Window,100.0,18.5,0.0
+Observation Masking,100.0,18.5,0.0
+Recursive Summarization,100.0,20.5,0.0
+Zone Based Pruning,100.0,19.5,0.0

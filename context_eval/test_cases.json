@@ -1,0 +1,46 @@
+[
+    {
+        "messages": [
+            {
+                "role": "user",
+                "content": "Hello support assistant"
+            },
+            {
+                "role": "assistant",
+                "content": "Welcome to Coderift Support"
+            },
+            {
+                "role": "tool",
+                "content": "Found 7 open tickets including bug reports and feature requests"
+            },
+            {
+                "role": "user",
+                "content": "Show me ticket information"
+            },
+            {
+                "role": "assistant",
+                "content": "Ticket information displayed"
+            }
+        ],
+        "question": "How many open tickets?",
+        "expected": "7"
+    },
+    {
+        "messages": [
+            {
+                "role": "user",
+                "content": "Which team handles bugs?"
+            },
+            {
+                "role": "tool",
+                "content": "Development team handles bug reports"
+            },
+            {
+                "role": "assistant",
+                "content": "The issue was assigned"
+            }
+        ],
+        "question": "Which team?",
+        "expected": "Development"
+    }
+]
