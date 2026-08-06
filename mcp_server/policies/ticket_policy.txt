@@ -1,0 +1,15 @@
+Coderift Support Ticket Policy
+
+1. Every support ticket must have a valid customer name.
+2. Every ticket must belong to one category.
+3. Categories:
+   - Bug Report
+   - Feature Request
+   - General Question
+4. Ticket statuses are:
+   - Open
+   - Pending
+   - Closed
+5. Closed tickets cannot be reopened without manager approval.
+6. High priority tickets should be handled before Medium and Low priority tickets.
+7. Every ticket update must be logged.
