@@ -1,0 +1,44 @@
+[
+  {
+    "id": "q1",
+    "question": "What are the first response and resolution targets for a high priority ticket?",
+    "expected_sources": ["sla_policy"],
+    "expected_keywords": ["1 hour", "24 hours"],
+    "architecture": "naive"
+  },
+  {
+    "id": "q2",
+    "question": "What statuses are allowed for tickets?",
+    "expected_sources": ["ticket_policy"],
+    "expected_keywords": ["Open", "Pending", "Closed"],
+    "architecture": "naive"
+  },
+  {
+    "id": "q3",
+    "question": "What must happen before a high-priority ticket is closed?",
+    "expected_sources": ["security_policy"],
+    "expected_keywords": ["authorized", "validated"],
+    "architecture": "hybrid"
+  },
+  {
+    "id": "q4",
+    "question": "Can a customer directly update a ticket status?",
+    "expected_sources": ["security_policy"],
+    "expected_keywords": ["cannot", "update ticket status"],
+    "architecture": "hybrid"
+  },
+  {
+    "id": "q5",
+    "question": "A ticket is high priority and the team wants to close it. Which policy constraints apply to the write operation and what additional approval condition exists in the MCP implementation?",
+    "expected_sources": ["security_policy", "ticket_policy"],
+    "expected_keywords": ["validated", "logged"],
+    "architecture": "agentic"
+  },
+  {
+    "id": "q6",
+    "question": "Compare the service targets for low and medium priority tickets.",
+    "expected_sources": ["sla_policy"],
+    "expected_keywords": ["4 hours", "24 hours", "3 business days", "5 business days"],
+    "architecture": "agentic"
+  }
+]

@@ -2,6 +2,7 @@ from .app import mcp
 
 try:
     from . import tools
+    from . import tools_rag
     from . import prompts
     from . import resources
 
@@ -15,7 +16,7 @@ except Exception as e:
 
 if __name__ == "__main__":
     mcp.run(
-    transport="http",
-    host="127.0.0.1",
-    port=8000
-)
+        transport="http",
+        host="127.0.0.1",
+        port=8000,
+    )
