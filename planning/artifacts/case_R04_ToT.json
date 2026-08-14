@@ -1,0 +1,11 @@
+{
+  "case_id": "R04",
+  "case_name": "Open tickets by priority",
+  "method": "ToT",
+  "success": true,
+  "elapsed_sec": 21.515589000075124,
+  "llm_calls": 9,
+  "total_tokens": 2843,
+  "total_latency_sec": 21.51561300002504,
+  "output": "Analyze the retrieved tickets to identify the priority groups and their respective volumes, then apply the SLA rules to determine which group to handle first\n\nApply a sorting algorithm to the retrieved tickets based on their priority levels, and recommend the highest-priority group to be handled first, considering the SLA implications for each group"
+}

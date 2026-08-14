@@ -1,0 +1,11 @@
+{
+  "case_id": "R11",
+  "case_name": "Safe status transition",
+  "method": "LATS",
+  "success": true,
+  "elapsed_sec": 5.1505442999769,
+  "llm_calls": 2,
+  "total_tokens": 741,
+  "total_latency_sec": 5.150634100078605,
+  "output": "Selected ticket status updated to 'In Progress' while respecting Coderift's security and ticket policies"
+}

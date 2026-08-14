@@ -1,0 +1,11 @@
+{
+  "case_id": "R01",
+  "case_name": "High-priority ordering",
+  "method": "LATS",
+  "success": true,
+  "elapsed_sec": 0.9277515000430867,
+  "llm_calls": 2,
+  "total_tokens": 752,
+  "total_latency_sec": 0.9277677000500262,
+  "output": "Tickets prioritized according to Coderift's ticket policy and SLA policy, with critical tickets handled first"
+}

@@ -1,0 +1,11 @@
+{
+  "case_id": "R12",
+  "case_name": "Urgent workload planning",
+  "method": "ToT",
+  "success": true,
+  "elapsed_sec": 22.15759800001979,
+  "llm_calls": 9,
+  "total_tokens": 2892,
+  "total_latency_sec": 22.157616899930872,
+  "output": "Assign tickets to teams based on their expertise and current workload, ensuring that the most critical tickets are handled by the most available and suitable teams\n\nPrioritize tickets with impending SLA deadlines, focusing on resolving those that are closest to their time limits to prevent potential service level agreement violations"
+}

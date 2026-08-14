@@ -1,0 +1,11 @@
+{
+  "case_id": "R15",
+  "case_name": "Full support planning",
+  "method": "ToT",
+  "success": true,
+  "elapsed_sec": 21.91315569996368,
+  "llm_calls": 9,
+  "total_tokens": 3500,
+  "total_latency_sec": 21.913173399982043,
+  "output": "Evaluate team workload and resource allocation to ensure capacity for urgent ticket updates\n\nAssess potential policy exemptions or temporary adjustments to facilitate timely updates for critical tickets"
+}

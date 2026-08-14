@@ -1,0 +1,11 @@
+{
+  "case_id": "R07",
+  "case_name": "Mixed-priority workload",
+  "method": "LATS",
+  "success": true,
+  "elapsed_sec": 5.241354800062254,
+  "llm_calls": 2,
+  "total_tokens": 678,
+  "total_latency_sec": 5.241429300047457,
+  "output": "Sorted tickets by priority"
+}

@@ -160,6 +160,28 @@ Each ticket includes:
 
 ---
 
-## Author
+## Self-Refine, Reflexion, Grounding, Evaluation & Metrics
+
+This repository now includes the Week 4 Decomposition & Planning lab implementations integrated with the existing planning toolkit. The additions (Self-Refine, Reflexion orchestration, grounding, evaluation harness, and metrics collection) extend the planning layer without replacing the toolkit algorithms already present.
+
+How to run the evaluation harness
+
+1. Ensure dependencies and GROQ_API_KEY are set in `.env`.
+2. Create the database: `python db/create_db.py`.
+3. Run the evaluation harness to execute Plan-and-Solve, Tree-of-Thoughts, and LATS on the fixed reasoning cases:
+
+```bash
+python -m planning.eval_runner
+```
+
+Artifacts and metrics are written to `planning/artifacts/`.
+
+Demo and reproducible runs
+
+- Run the MCP server: `py -m mcp_server.server` (or `python -m mcp_server.server`)
+- Start the agent in another terminal: `py -m agent.main`
+- Provide complex requests (examples in `planning/README.md`) and observe the integrated planning agent using dynamic decomposition, Self-Refine, Reflexion, and grounded LATS.
+
+Credits
 
 Abdallah Fathi

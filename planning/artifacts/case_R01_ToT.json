@@ -1,0 +1,11 @@
+{
+  "case_id": "R01",
+  "case_name": "High-priority ordering",
+  "method": "ToT",
+  "success": true,
+  "elapsed_sec": 5.164340800023638,
+  "llm_calls": 9,
+  "total_tokens": 3029,
+  "total_latency_sec": 5.164384600007907,
+  "output": "Assess the tickets' SLA timelines to ensure compliance and handle the ones closest to their resolution deadlines first.\n\nCategorize the high-priority tickets based on their impact on business-critical functions and customer satisfaction, addressing the most critical ones immediately."
+}

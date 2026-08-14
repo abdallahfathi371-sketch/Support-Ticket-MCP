@@ -1,0 +1,11 @@
+{
+  "case_id": "R03",
+  "case_name": "Frontend ordering",
+  "method": "ToT",
+  "success": true,
+  "elapsed_sec": 6.342557900003158,
+  "llm_calls": 9,
+  "total_tokens": 2705,
+  "total_latency_sec": 6.342614099965431,
+  "output": "Review high-priority tickets with high business impact and sort them by SLA deadline\n\nReview high-priority tickets with customer-escalated status and sort them by SLA deadline"
+}

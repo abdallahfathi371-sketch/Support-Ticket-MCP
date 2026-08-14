@@ -1,0 +1,11 @@
+{
+  "case_id": "R08",
+  "case_name": "Closed ticket reopening",
+  "method": "ToT",
+  "success": true,
+  "elapsed_sec": 22.90213359997142,
+  "llm_calls": 9,
+  "total_tokens": 3078,
+  "total_latency_sec": 22.902149999979883,
+  "output": "Re-examine tickets closed due to lack of information and verify if new evidence has become available to support reopening\n\nInvestigate tickets closed with incomplete solutions and assess whether revised approaches or new findings could justify reopening under Coderift's ticket policy"
+}

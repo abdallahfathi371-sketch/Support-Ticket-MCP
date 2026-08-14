@@ -1,0 +1,11 @@
+{
+  "case_id": "R15",
+  "case_name": "Full support planning",
+  "method": "LATS",
+  "success": true,
+  "elapsed_sec": 5.167107700021006,
+  "llm_calls": 2,
+  "total_tokens": 821,
+  "total_latency_sec": 5.167190200067125,
+  "output": "Urgent tickets identified and assigned to teams"
+}

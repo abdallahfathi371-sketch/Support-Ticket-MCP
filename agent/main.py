@@ -80,12 +80,19 @@ async def ask_groq(messages):
     """
     Send a chat request to Groq.
     """
+    import time
+    try:
+        from planning.metrics import record_llm_call
+    except Exception:
+        record_llm_call = None
 
+    t0 = time.perf_counter()
     response = groq_client.chat.completions.create(
         model="llama-3.3-70b-versatile",
         messages=messages,
         temperature=0,
     )
+    t1 = time.perf_counter()
 
     content = response.choices[0].message.content
 
@@ -93,6 +100,13 @@ async def ask_groq(messages):
         raise RuntimeError(
             "Groq returned an empty response."
         )
+
+    if record_llm_call is not None:
+        try:
+            approx_tokens = max(1, int((len(str(messages)) + len(str(content))) / 4))
+            record_llm_call(latency=t1 - t0, approx_tokens=approx_tokens)
+        except Exception:
+            pass
 
     return content.strip()
 

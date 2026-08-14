@@ -1,0 +1,11 @@
+{
+  "case_id": "R14",
+  "case_name": "Ambiguous first ticket",
+  "method": "ToT",
+  "success": true,
+  "elapsed_sec": 21.026393299922347,
+  "llm_calls": 9,
+  "total_tokens": 3007,
+  "total_latency_sec": 21.02645709994249,
+  "output": "Filter tickets by their current status to identify any that are blocked or pending additional information\n\nApply Coderift's severity and impact guidelines to break ties between tickets with the same priority level and submission time"
+}

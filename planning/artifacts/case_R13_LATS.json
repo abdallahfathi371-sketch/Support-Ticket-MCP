@@ -1,0 +1,11 @@
+{
+  "case_id": "R13",
+  "case_name": "Customer reopening request",
+  "method": "LATS",
+  "success": true,
+  "elapsed_sec": 5.116617999970913,
+  "llm_calls": 2,
+  "total_tokens": 707,
+  "total_latency_sec": 5.116648799972609,
+  "output": "Ticket reopened"
+}

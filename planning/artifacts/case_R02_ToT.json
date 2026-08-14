@@ -1,0 +1,11 @@
+{
+  "case_id": "R02",
+  "case_name": "Backend priority",
+  "method": "ToT",
+  "success": true,
+  "elapsed_sec": 4.944485499989241,
+  "llm_calls": 9,
+  "total_tokens": 2583,
+  "total_latency_sec": 4.944495299947448,
+  "output": "Investigate high-priority tickets with SLA expiration within 24 hours\n\nAnalyze tickets with priority 'Critical' and sort them by SLA expiration time"
+}

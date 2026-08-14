@@ -1,0 +1,11 @@
+{
+  "case_id": "R07",
+  "case_name": "Mixed-priority workload",
+  "method": "ToT",
+  "success": true,
+  "elapsed_sec": 23.094330799998716,
+  "llm_calls": 9,
+  "total_tokens": 2894,
+  "total_latency_sec": 23.094362500007264,
+  "output": "Break ties in the sorted list by assigning a unique identifier to each ticket and sorting by this identifier\n\nBreak ties in the sorted list by using the ticket's last update time"
+}

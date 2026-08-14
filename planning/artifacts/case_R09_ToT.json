@@ -1,0 +1,11 @@
+{
+  "case_id": "R09",
+  "case_name": "Security authorization",
+  "method": "ToT",
+  "success": true,
+  "elapsed_sec": 23.020886400016025,
+  "llm_calls": 9,
+  "total_tokens": 2983,
+  "total_latency_sec": 23.020911800093018,
+  "output": "Validate the ticket status update request against the predefined ticket workflows and transitions\n\nVerify the user's role and permissions to update the ticket status"
+}

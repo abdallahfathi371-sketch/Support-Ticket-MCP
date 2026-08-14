@@ -1,0 +1,11 @@
+{
+  "case_id": "R06",
+  "case_name": "Pending high-priority tickets",
+  "method": "ToT",
+  "success": true,
+  "elapsed_sec": 21.677495899959467,
+  "llm_calls": 9,
+  "total_tokens": 2880,
+  "total_latency_sec": 21.67750879994128,
+  "output": "Analyze SLA policy to determine time-sensitive thresholds for high-priority tickets\n\nApply business rules to filter high-priority tickets based on customer tier and ticket category"
+}

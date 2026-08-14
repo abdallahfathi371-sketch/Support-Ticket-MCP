@@ -1,0 +1,11 @@
+{
+  "case_id": "R02",
+  "case_name": "Backend priority",
+  "method": "LATS",
+  "success": true,
+  "elapsed_sec": 1.0338893999578431,
+  "llm_calls": 2,
+  "total_tokens": 694,
+  "total_latency_sec": 1.033905699965544,
+  "output": "Prioritized list of Backend tickets"
+}

@@ -1,0 +1,11 @@
+{
+  "case_id": "R11",
+  "case_name": "Safe status transition",
+  "method": "ToT",
+  "success": true,
+  "elapsed_sec": 20.478397900005803,
+  "llm_calls": 9,
+  "total_tokens": 2984,
+  "total_latency_sec": 20.478409399976954,
+  "output": "Verify the user has the necessary permissions to update the ticket status to 'In Progress'\n\nCheck the current status of the ticket to ensure it can be transitioned to 'In Progress' according to Coderift's ticket policies"
+}
