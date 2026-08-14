@@ -1,0 +1,11 @@
+{
+  "case_id": "R12",
+  "case_name": "Urgent workload planning",
+  "method": "LATS",
+  "success": true,
+  "elapsed_sec": 5.864031300065108,
+  "llm_calls": 2,
+  "total_tokens": 977,
+  "total_latency_sec": 5.864048100076616,
+  "output": "Open high-priority tickets reviewed, teams assigned, SLA requirements checked, and handling order recommended."
+}

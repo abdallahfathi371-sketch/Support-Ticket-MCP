@@ -1,0 +1,11 @@
+{
+  "case_id": "R08",
+  "case_name": "Closed ticket reopening",
+  "method": "LATS",
+  "success": true,
+  "elapsed_sec": 5.313243399956264,
+  "llm_calls": 2,
+  "total_tokens": 757,
+  "total_latency_sec": 5.313274300075136,
+  "output": "Initial Review"
+}

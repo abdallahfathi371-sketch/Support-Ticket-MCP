@@ -1,0 +1,11 @@
+{
+  "case_id": "R14",
+  "case_name": "Ambiguous first ticket",
+  "method": "LATS",
+  "success": true,
+  "elapsed_sec": 4.971797000034712,
+  "llm_calls": 2,
+  "total_tokens": 735,
+  "total_latency_sec": 4.97183000005316,
+  "output": "Open support tickets sorted by priority and creation date"
+}

@@ -1,0 +1,11 @@
+{
+  "case_id": "R03",
+  "case_name": "Frontend ordering",
+  "method": "LATS",
+  "success": true,
+  "elapsed_sec": 5.641074000042863,
+  "llm_calls": 2,
+  "total_tokens": 693,
+  "total_latency_sec": 5.641131600015797,
+  "output": "Initial Review"
+}

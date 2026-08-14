@@ -1,0 +1,11 @@
+{
+  "case_id": "R05",
+  "case_name": "Feature request ambiguity",
+  "method": "LATS",
+  "success": true,
+  "elapsed_sec": 5.346219699946232,
+  "llm_calls": 2,
+  "total_tokens": 799,
+  "total_latency_sec": 5.346246400033124,
+  "output": "Open feature requests reviewed and prioritized based on user votes and alignment with Coderift policy"
+}

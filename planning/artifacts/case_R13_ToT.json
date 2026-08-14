@@ -1,0 +1,11 @@
+{
+  "case_id": "R13",
+  "case_name": "Customer reopening request",
+  "method": "ToT",
+  "success": true,
+  "elapsed_sec": 20.973001900012605,
+  "llm_calls": 9,
+  "total_tokens": 2816,
+  "total_latency_sec": 20.97301079996396,
+  "output": "Verify if the customer has the required authorization to request a ticket reopening outside of the standard timeframe\n\nCheck the company's policy for exceptions to the standard reopening timeframe and determine if the customer's situation qualifies"
+}

@@ -1,0 +1,11 @@
+{
+  "case_id": "R06",
+  "case_name": "Pending high-priority tickets",
+  "method": "LATS",
+  "success": true,
+  "elapsed_sec": 5.466851100092754,
+  "llm_calls": 2,
+  "total_tokens": 824,
+  "total_latency_sec": 5.4669727999717,
+  "output": "Pending high-priority tickets identified and prioritized for follow-up."
+}

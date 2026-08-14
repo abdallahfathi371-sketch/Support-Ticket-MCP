@@ -1,0 +1,11 @@
+{
+  "case_id": "R04",
+  "case_name": "Open tickets by priority",
+  "method": "LATS",
+  "success": true,
+  "elapsed_sec": 6.355737300007604,
+  "llm_calls": 2,
+  "total_tokens": 932,
+  "total_latency_sec": 6.355748699977994,
+  "output": "Open tickets grouped by priority: High (10 tickets), Medium (5 tickets), Low (3 tickets). Recommendation: Handle High priority tickets first to comply with SLA requirements and mitigate potential losses."
+}

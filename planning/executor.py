@@ -11,6 +11,17 @@ from groq import Groq
 
 from .models import Plan
 
+# Additional imports for Self-Refine/Reflexion routing and algorithms
+from .routing import route_method_for_instruction
+from .groq_model import GroqChatModel
+from .algorithms.plan_and_solve import plan_and_solve
+from .algorithms.tree_of_thoughts import tree_of_thoughts
+from .algorithms.lats import lats
+from .algorithms.environment import Environment
+from .algorithms.self_refine import self_refine
+from .algorithms.reflexion import reflexion
+from .metrics import get_collector, start_metrics, end_metrics
+
 
 load_dotenv()
 
@@ -342,6 +353,60 @@ Rules:
 8. Return a concise but useful analysis.
 """
 
+    # Decide which planning method to use for this instruction
+    method = route_method_for_instruction(instruction)
+
+    llm = GroqChatModel()
+
+    if method == "PS":
+        return plan_and_solve(f"{instruction}\n\nEvidence:\n{context_text}", llm)
+
+    if method == "ToT":
+        thoughts = tree_of_thoughts(
+            problem=f"{instruction}\n\nEvidence:\n{context_text}",
+            llm=llm,
+            depth=2,
+            beam_width=2,
+        )
+        return "\n\n".join([f"State: {t.state}\nScore: {t.score}\nRationale: {t.rationale}" for t in thoughts])
+
+    if method == "LATS":
+        env = Environment()
+        result = lats(
+            task=f"{instruction}\n\nEvidence:\n{context_text}",
+            llm=llm,
+            environment=env,
+            iterations=2,
+            n_actions=2,
+        )
+        return result.output
+
+    if method == "SelfRefine":
+        initial = ask_groq(prompt)
+        rubric = (
+            "1) Accuracy: must use only provided evidence.\n"
+            "2) No invented ticket IDs, priorities, statuses, or customer data.\n"
+            "3) If uncertain, explicitly state uncertainty.\n"
+        )
+        env = Environment()
+        revised = self_refine(initial, rubric, llm, validator=env, max_revisions=1)
+        return revised
+
+    if method == "Reflexion":
+        env = Environment()
+
+        def trial_fn(reflections: list[str]) -> tuple[bool, str]:
+            refl_text = "\n\n".join(reflections[-5:]) if reflections else ""
+            attempt_prompt = f"{instruction}\n\nEvidence:\n{context_text}\n\nPrevious reflections:\n{refl_text}"
+            output = plan_and_solve(attempt_prompt, llm)
+            feedback = env.evaluate(output)
+            success = bool(feedback.success)
+            return success, output
+
+        reflex_res = reflexion(trial_fn, llm=llm, validator=env, trials=3, buffer_size=5)
+        return reflex_res.output or ""
+
+    # Fallback: raw Groq call
     return ask_groq(prompt)
 
 
