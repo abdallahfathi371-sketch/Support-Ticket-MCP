@@ -1,9 +1,12 @@
 import asyncio
 import json
 import os
+import re
 
 from dotenv import load_dotenv
 from groq import Groq
+
+from groq_settings import GROQ_MODEL
 
 from .client import MCPClient
 from .prompt import SYSTEM_PROMPT
@@ -19,11 +22,6 @@ from planning.algorithms.dynamic_decomposition import DynamicDecomposer
 # ============================================================
 
 load_dotenv()
-
-
-# ============================================================
-# Clients
-# ============================================================
 
 mcp_client = MCPClient()
 
@@ -88,7 +86,7 @@ async def ask_groq(messages):
 
     t0 = time.perf_counter()
     response = groq_client.chat.completions.create(
-        model="llama-3.3-70b-versatile",
+        model=GROQ_MODEL,
         messages=messages,
         temperature=0,
     )
@@ -109,6 +107,94 @@ async def ask_groq(messages):
             pass
 
     return content.strip()
+
+
+def strip_model_thinking(text: str) -> str:
+    """
+    Remove reasoning blocks some models emit before the final answer.
+    """
+
+    if not text:
+        return text
+
+    think_open = "<" + "redacted_thinking" + ">"
+    think_close = "</" + "redacted_thinking" + ">"
+
+    cleaned = re.sub(
+        re.escape(think_open) + r"[\s\S]*?" + re.escape(think_close),
+        "",
+        text,
+        flags=re.IGNORECASE,
+    )
+
+    return cleaned.strip()
+
+
+def parse_tool_request(text: str) -> dict | None:
+    """
+    Extract a tool-call JSON object from model output.
+    """
+
+    text = strip_model_thinking(text)
+
+    try:
+        data = json.loads(text)
+
+        if isinstance(data, dict) and "tool" in data:
+            return data
+
+    except json.JSONDecodeError:
+        pass
+
+    if "```" in text:
+        lines = text.splitlines()
+        json_lines = []
+        in_fence = False
+
+        for line in lines:
+            stripped = line.strip()
+
+            if stripped.startswith("```"):
+                in_fence = not in_fence
+                continue
+
+            if in_fence:
+                json_lines.append(line)
+
+        if json_lines:
+            text = "\n".join(json_lines).strip()
+
+    start = text.find("{")
+    end = text.rfind("}")
+
+    if start != -1 and end > start:
+        try:
+            data = json.loads(text[start:end + 1])
+
+            if isinstance(data, dict) and "tool" in data:
+                return data
+
+        except json.JSONDecodeError:
+            pass
+
+    return None
+
+
+def normalize_tool_arguments(arguments: dict) -> dict:
+    """
+    Coerce common MCP argument types before tool execution.
+    """
+
+    normalized = dict(arguments)
+
+    for field in ("ticket_id", "employee_id", "top_k"):
+        if field in normalized:
+            try:
+                normalized[field] = int(normalized[field])
+            except (TypeError, ValueError):
+                pass
+
+    return normalized
 
 
 # ============================================================
@@ -518,65 +604,62 @@ Available MCP Tools:
     # Tool Request
     # --------------------------------------------------------
 
-    try:
+    tool_request = parse_tool_request(response)
 
-        tool_request = json.loads(
-            response
-        )
+    if tool_request and "tool" in tool_request:
 
-        if "tool" in tool_request:
+        tool_name = tool_request["tool"]
 
-            tool_name = tool_request["tool"]
-
-            arguments = tool_request.get(
+        arguments = normalize_tool_arguments(
+            tool_request.get(
                 "arguments",
                 {},
             )
+        )
 
-            arguments["employee_id"] = 1
+        arguments["employee_id"] = 1
 
-            result = await mcp_client.execute_tool(
-                tool_name,
-                arguments,
-            )
+        result = await mcp_client.execute_tool(
+            tool_name,
+            arguments,
+        )
 
-            # ------------------------------------------------
-            # Save tool observation
-            # ------------------------------------------------
+        # ------------------------------------------------
+        # Save tool observation
+        # ------------------------------------------------
 
-            memory.remember(
-                "tool",
-                f"{tool_name}: {result}",
-            )
+        memory.remember(
+            "tool",
+            f"{tool_name}: {result}",
+        )
 
-            memory.episodic.add_episode(
-                content=f"{tool_name}: {result}",
-                reason="Tool observation from MCP call",
-                importance=0.8,
-            )
+        memory.episodic.add_episode(
+            content=f"{tool_name}: {result}",
+            reason="Tool observation from MCP call",
+            importance=0.8,
+        )
 
-            final_messages = messages + [
-                {
-                    "role": "assistant",
-                    "content": response,
-                },
-                {
-                    "role": "tool",
-                    "content": str(result),
-                    "tool_call_id": tool_name,
-                },
-            ]
+        final_messages = messages + [
+            {
+                "role": "assistant",
+                "content": response,
+            },
+            {
+                "role": "user",
+                "content": (
+                    f"Tool result from {tool_name}:\n"
+                    f"{result}"
+                ),
+            },
+        ]
 
-            final_answer = await ask_groq(
-                final_messages
-            )
+        final_answer = await ask_groq(
+            final_messages
+        )
 
-            return final_answer
+        return strip_model_thinking(final_answer)
 
-    except json.JSONDecodeError:
-        pass
-
-    return response
+    return strip_model_thinking(response)
 
 
 # ============================================================

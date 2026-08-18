@@ -6,6 +6,8 @@ from typing import Any, Awaitable, Callable
 
 from groq import Groq
 
+from groq_settings import GROQ_MODEL
+
 from planning.models import Plan
 
 
@@ -163,7 +165,7 @@ class DynamicDecomposer:
 
     def __init__(
         self,
-        model: str = "llama-3.3-70b-versatile",
+        model: str = GROQ_MODEL,
         client: object | None = None,
         use_real_llm: bool | None = None,
     ):

@@ -2,17 +2,833 @@
     {
         "subject": "search_open_tickets:",
         "current_fact": "{'success': True, 'count': 7, 'tickets': [{'ticket_id': 1, 'customer_name': 'Ahmed Ali', 'issue': 'Login API returns 500 error', 'category': 'Bug Report', 'priority': 'High'}, {'ticket_id': 4, 'customer_name': 'Mona Adel', 'issue': 'Profile page crashes', 'category': 'Bug Report', 'priority': 'High'}, {'ticket_id': 5, 'customer_name': 'Youssef Ibrahim', 'issue': 'Need export to Excel', 'category': 'Feature Request', 'priority': 'Medium'}, {'ticket_id': 8, 'customer_name': 'Aya Gamal', 'issue': 'Navbar overlaps content', 'category': 'Bug Report', 'priority': 'Medium'}, {'ticket_id': 10, 'customer_name': 'Heba Ahmed', 'issue': 'Cannot upload image', 'category': 'Bug Report', 'priority': 'High'}, {'ticket_id': 11, 'customer_name': 'Mostafa Ali', 'issue': 'Refund process question', 'category': 'General Question', 'priority': 'Low'}, {'ticket_id': 14, 'customer_name': 'Nour Hassan', 'issue': 'Add Arabic language', 'category': 'Feature Request', 'priority': 'Medium'}]}",
-        "version": 1,
-        "history": [],
+        "version": 13,
+        "history": [
+            {
+                "version": 1,
+                "fact": "{'success': True, 'count': 7, 'tickets': [{'ticket_id': 1, 'customer_name': 'Ahmed Ali', 'issue': 'Login API returns 500 error', 'category': 'Bug Report', 'priority': 'High'}, {'ticket_id': 4, 'customer_name': 'Mona Adel', 'issue': 'Profile page crashes', 'category': 'Bug Report', 'priority': 'High'}, {'ticket_id': 5, 'customer_name': 'Youssef Ibrahim', 'issue': 'Need export to Excel', 'category': 'Feature Request', 'priority': 'Medium'}, {'ticket_id': 8, 'customer_name': 'Aya Gamal', 'issue': 'Navbar overlaps content', 'category': 'Bug Report', 'priority': 'Medium'}, {'ticket_id': 10, 'customer_name': 'Heba Ahmed', 'issue': 'Cannot upload image', 'category': 'Bug Report', 'priority': 'High'}, {'ticket_id': 11, 'customer_name': 'Mostafa Ali', 'issue': 'Refund process question', 'category': 'General Question', 'priority': 'Low'}, {'ticket_id': 14, 'customer_name': 'Nour Hassan', 'issue': 'Add Arabic language', 'category': 'Feature Request', 'priority': 'Medium'}]}",
+                "timestamp": "2026-08-07T00:26:52.241656"
+            },
+            {
+                "version": 2,
+                "fact": "{'success': True, 'count': 7, 'tickets': [{'ticket_id': 1, 'customer_name': 'Ahmed Ali', 'issue': 'Login API returns 500 error', 'category': 'Bug Report', 'priority': 'High'}, {'ticket_id': 4, 'customer_name': 'Mona Adel', 'issue': 'Profile page crashes', 'category': 'Bug Report', 'priority': 'High'}, {'ticket_id': 5, 'customer_name': 'Youssef Ibrahim', 'issue': 'Need export to Excel', 'category': 'Feature Request', 'priority': 'Medium'}, {'ticket_id': 8, 'customer_name': 'Aya Gamal', 'issue': 'Navbar overlaps content', 'category': 'Bug Report', 'priority': 'Medium'}, {'ticket_id': 10, 'customer_name': 'Heba Ahmed', 'issue': 'Cannot upload image', 'category': 'Bug Report', 'priority': 'High'}, {'ticket_id': 11, 'customer_name': 'Mostafa Ali', 'issue': 'Refund process question', 'category': 'General Question', 'priority': 'Low'}, {'ticket_id': 14, 'customer_name': 'Nour Hassan', 'issue': 'Add Arabic language', 'category': 'Feature Request', 'priority': 'Medium'}]}",
+                "timestamp": "2026-08-18T15:44:09.279888"
+            },
+            {
+                "version": 3,
+                "fact": "{'success': True, 'count': 7, 'tickets': [{'ticket_id': 1, 'customer_name': 'Ahmed Ali', 'issue': 'Login API returns 500 error', 'category': 'Bug Report', 'priority': 'High'}, {'ticket_id': 4, 'customer_name': 'Mona Adel', 'issue': 'Profile page crashes', 'category': 'Bug Report', 'priority': 'High'}, {'ticket_id': 5, 'customer_name': 'Youssef Ibrahim', 'issue': 'Need export to Excel', 'category': 'Feature Request', 'priority': 'Medium'}, {'ticket_id': 8, 'customer_name': 'Aya Gamal', 'issue': 'Navbar overlaps content', 'category': 'Bug Report', 'priority': 'Medium'}, {'ticket_id': 10, 'customer_name': 'Heba Ahmed', 'issue': 'Cannot upload image', 'category': 'Bug Report', 'priority': 'High'}, {'ticket_id': 11, 'customer_name': 'Mostafa Ali', 'issue': 'Refund process question', 'category': 'General Question', 'priority': 'Low'}, {'ticket_id': 14, 'customer_name': 'Nour Hassan', 'issue': 'Add Arabic language', 'category': 'Feature Request', 'priority': 'Medium'}]}",
+                "timestamp": "2026-08-18T15:44:09.288897"
+            },
+            {
+                "version": 4,
+                "fact": "{'success': True, 'count': 7, 'tickets': [{'ticket_id': 1, 'customer_name': 'Ahmed Ali', 'issue': 'Login API returns 500 error', 'category': 'Bug Report', 'priority': 'High'}, {'ticket_id': 4, 'customer_name': 'Mona Adel', 'issue': 'Profile page crashes', 'category': 'Bug Report', 'priority': 'High'}, {'ticket_id': 5, 'customer_name': 'Youssef Ibrahim', 'issue': 'Need export to Excel', 'category': 'Feature Request', 'priority': 'Medium'}, {'ticket_id': 8, 'customer_name': 'Aya Gamal', 'issue': 'Navbar overlaps content', 'category': 'Bug Report', 'priority': 'Medium'}, {'ticket_id': 10, 'customer_name': 'Heba Ahmed', 'issue': 'Cannot upload image', 'category': 'Bug Report', 'priority': 'High'}, {'ticket_id': 11, 'customer_name': 'Mostafa Ali', 'issue': 'Refund process question', 'category': 'General Question', 'priority': 'Low'}, {'ticket_id': 14, 'customer_name': 'Nour Hassan', 'issue': 'Add Arabic language', 'category': 'Feature Request', 'priority': 'Medium'}]}",
+                "timestamp": "2026-08-18T15:44:09.307100"
+            },
+            {
+                "version": 5,
+                "fact": "{'success': True, 'count': 7, 'tickets': [{'ticket_id': 1, 'customer_name': 'Ahmed Ali', 'issue': 'Login API returns 500 error', 'category': 'Bug Report', 'priority': 'High'}, {'ticket_id': 4, 'customer_name': 'Mona Adel', 'issue': 'Profile page crashes', 'category': 'Bug Report', 'priority': 'High'}, {'ticket_id': 5, 'customer_name': 'Youssef Ibrahim', 'issue': 'Need export to Excel', 'category': 'Feature Request', 'priority': 'Medium'}, {'ticket_id': 8, 'customer_name': 'Aya Gamal', 'issue': 'Navbar overlaps content', 'category': 'Bug Report', 'priority': 'Medium'}, {'ticket_id': 10, 'customer_name': 'Heba Ahmed', 'issue': 'Cannot upload image', 'category': 'Bug Report', 'priority': 'High'}, {'ticket_id': 11, 'customer_name': 'Mostafa Ali', 'issue': 'Refund process question', 'category': 'General Question', 'priority': 'Low'}, {'ticket_id': 14, 'customer_name': 'Nour Hassan', 'issue': 'Add Arabic language', 'category': 'Feature Request', 'priority': 'Medium'}]}",
+                "timestamp": "2026-08-18T15:48:23.908359"
+            },
+            {
+                "version": 6,
+                "fact": "{'success': True, 'count': 7, 'tickets': [{'ticket_id': 1, 'customer_name': 'Ahmed Ali', 'issue': 'Login API returns 500 error', 'category': 'Bug Report', 'priority': 'High'}, {'ticket_id': 4, 'customer_name': 'Mona Adel', 'issue': 'Profile page crashes', 'category': 'Bug Report', 'priority': 'High'}, {'ticket_id': 5, 'customer_name': 'Youssef Ibrahim', 'issue': 'Need export to Excel', 'category': 'Feature Request', 'priority': 'Medium'}, {'ticket_id': 8, 'customer_name': 'Aya Gamal', 'issue': 'Navbar overlaps content', 'category': 'Bug Report', 'priority': 'Medium'}, {'ticket_id': 10, 'customer_name': 'Heba Ahmed', 'issue': 'Cannot upload image', 'category': 'Bug Report', 'priority': 'High'}, {'ticket_id': 11, 'customer_name': 'Mostafa Ali', 'issue': 'Refund process question', 'category': 'General Question', 'priority': 'Low'}, {'ticket_id': 14, 'customer_name': 'Nour Hassan', 'issue': 'Add Arabic language', 'category': 'Feature Request', 'priority': 'Medium'}]}",
+                "timestamp": "2026-08-18T15:48:23.922146"
+            },
+            {
+                "version": 7,
+                "fact": "{'success': True, 'count': 7, 'tickets': [{'ticket_id': 1, 'customer_name': 'Ahmed Ali', 'issue': 'Login API returns 500 error', 'category': 'Bug Report', 'priority': 'High'}, {'ticket_id': 4, 'customer_name': 'Mona Adel', 'issue': 'Profile page crashes', 'category': 'Bug Report', 'priority': 'High'}, {'ticket_id': 5, 'customer_name': 'Youssef Ibrahim', 'issue': 'Need export to Excel', 'category': 'Feature Request', 'priority': 'Medium'}, {'ticket_id': 8, 'customer_name': 'Aya Gamal', 'issue': 'Navbar overlaps content', 'category': 'Bug Report', 'priority': 'Medium'}, {'ticket_id': 10, 'customer_name': 'Heba Ahmed', 'issue': 'Cannot upload image', 'category': 'Bug Report', 'priority': 'High'}, {'ticket_id': 11, 'customer_name': 'Mostafa Ali', 'issue': 'Refund process question', 'category': 'General Question', 'priority': 'Low'}, {'ticket_id': 14, 'customer_name': 'Nour Hassan', 'issue': 'Add Arabic language', 'category': 'Feature Request', 'priority': 'Medium'}]}",
+                "timestamp": "2026-08-18T15:48:23.947965"
+            },
+            {
+                "version": 8,
+                "fact": "{'success': True, 'count': 7, 'tickets': [{'ticket_id': 1, 'customer_name': 'Ahmed Ali', 'issue': 'Login API returns 500 error', 'category': 'Bug Report', 'priority': 'High'}, {'ticket_id': 4, 'customer_name': 'Mona Adel', 'issue': 'Profile page crashes', 'category': 'Bug Report', 'priority': 'High'}, {'ticket_id': 5, 'customer_name': 'Youssef Ibrahim', 'issue': 'Need export to Excel', 'category': 'Feature Request', 'priority': 'Medium'}, {'ticket_id': 8, 'customer_name': 'Aya Gamal', 'issue': 'Navbar overlaps content', 'category': 'Bug Report', 'priority': 'Medium'}, {'ticket_id': 10, 'customer_name': 'Heba Ahmed', 'issue': 'Cannot upload image', 'category': 'Bug Report', 'priority': 'High'}, {'ticket_id': 11, 'customer_name': 'Mostafa Ali', 'issue': 'Refund process question', 'category': 'General Question', 'priority': 'Low'}, {'ticket_id': 14, 'customer_name': 'Nour Hassan', 'issue': 'Add Arabic language', 'category': 'Feature Request', 'priority': 'Medium'}]}",
+                "timestamp": "2026-08-18T15:50:40.711332"
+            },
+            {
+                "version": 9,
+                "fact": "{'success': True, 'count': 7, 'tickets': [{'ticket_id': 1, 'customer_name': 'Ahmed Ali', 'issue': 'Login API returns 500 error', 'category': 'Bug Report', 'priority': 'High'}, {'ticket_id': 4, 'customer_name': 'Mona Adel', 'issue': 'Profile page crashes', 'category': 'Bug Report', 'priority': 'High'}, {'ticket_id': 5, 'customer_name': 'Youssef Ibrahim', 'issue': 'Need export to Excel', 'category': 'Feature Request', 'priority': 'Medium'}, {'ticket_id': 8, 'customer_name': 'Aya Gamal', 'issue': 'Navbar overlaps content', 'category': 'Bug Report', 'priority': 'Medium'}, {'ticket_id': 10, 'customer_name': 'Heba Ahmed', 'issue': 'Cannot upload image', 'category': 'Bug Report', 'priority': 'High'}, {'ticket_id': 11, 'customer_name': 'Mostafa Ali', 'issue': 'Refund process question', 'category': 'General Question', 'priority': 'Low'}, {'ticket_id': 14, 'customer_name': 'Nour Hassan', 'issue': 'Add Arabic language', 'category': 'Feature Request', 'priority': 'Medium'}]}",
+                "timestamp": "2026-08-18T15:50:40.727131"
+            },
+            {
+                "version": 10,
+                "fact": "{'success': True, 'count': 7, 'tickets': [{'ticket_id': 1, 'customer_name': 'Ahmed Ali', 'issue': 'Login API returns 500 error', 'category': 'Bug Report', 'priority': 'High'}, {'ticket_id': 4, 'customer_name': 'Mona Adel', 'issue': 'Profile page crashes', 'category': 'Bug Report', 'priority': 'High'}, {'ticket_id': 5, 'customer_name': 'Youssef Ibrahim', 'issue': 'Need export to Excel', 'category': 'Feature Request', 'priority': 'Medium'}, {'ticket_id': 8, 'customer_name': 'Aya Gamal', 'issue': 'Navbar overlaps content', 'category': 'Bug Report', 'priority': 'Medium'}, {'ticket_id': 10, 'customer_name': 'Heba Ahmed', 'issue': 'Cannot upload image', 'category': 'Bug Report', 'priority': 'High'}, {'ticket_id': 11, 'customer_name': 'Mostafa Ali', 'issue': 'Refund process question', 'category': 'General Question', 'priority': 'Low'}, {'ticket_id': 14, 'customer_name': 'Nour Hassan', 'issue': 'Add Arabic language', 'category': 'Feature Request', 'priority': 'Medium'}]}",
+                "timestamp": "2026-08-18T15:50:40.752106"
+            },
+            {
+                "version": 11,
+                "fact": "{'success': True, 'count': 7, 'tickets': [{'ticket_id': 1, 'customer_name': 'Ahmed Ali', 'issue': 'Login API returns 500 error', 'category': 'Bug Report', 'priority': 'High'}, {'ticket_id': 4, 'customer_name': 'Mona Adel', 'issue': 'Profile page crashes', 'category': 'Bug Report', 'priority': 'High'}, {'ticket_id': 5, 'customer_name': 'Youssef Ibrahim', 'issue': 'Need export to Excel', 'category': 'Feature Request', 'priority': 'Medium'}, {'ticket_id': 8, 'customer_name': 'Aya Gamal', 'issue': 'Navbar overlaps content', 'category': 'Bug Report', 'priority': 'Medium'}, {'ticket_id': 10, 'customer_name': 'Heba Ahmed', 'issue': 'Cannot upload image', 'category': 'Bug Report', 'priority': 'High'}, {'ticket_id': 11, 'customer_name': 'Mostafa Ali', 'issue': 'Refund process question', 'category': 'General Question', 'priority': 'Low'}, {'ticket_id': 14, 'customer_name': 'Nour Hassan', 'issue': 'Add Arabic language', 'category': 'Feature Request', 'priority': 'Medium'}]}",
+                "timestamp": "2026-08-18T15:52:16.395242"
+            },
+            {
+                "version": 12,
+                "fact": "{'success': True, 'count': 7, 'tickets': [{'ticket_id': 1, 'customer_name': 'Ahmed Ali', 'issue': 'Login API returns 500 error', 'category': 'Bug Report', 'priority': 'High'}, {'ticket_id': 4, 'customer_name': 'Mona Adel', 'issue': 'Profile page crashes', 'category': 'Bug Report', 'priority': 'High'}, {'ticket_id': 5, 'customer_name': 'Youssef Ibrahim', 'issue': 'Need export to Excel', 'category': 'Feature Request', 'priority': 'Medium'}, {'ticket_id': 8, 'customer_name': 'Aya Gamal', 'issue': 'Navbar overlaps content', 'category': 'Bug Report', 'priority': 'Medium'}, {'ticket_id': 10, 'customer_name': 'Heba Ahmed', 'issue': 'Cannot upload image', 'category': 'Bug Report', 'priority': 'High'}, {'ticket_id': 11, 'customer_name': 'Mostafa Ali', 'issue': 'Refund process question', 'category': 'General Question', 'priority': 'Low'}, {'ticket_id': 14, 'customer_name': 'Nour Hassan', 'issue': 'Add Arabic language', 'category': 'Feature Request', 'priority': 'Medium'}]}",
+                "timestamp": "2026-08-18T15:52:16.413496"
+            }
+        ],
         "created_at": "2026-08-07T00:26:52.241616",
-        "last_updated": "2026-08-07T00:26:52.241656"
+        "last_updated": "2026-08-18T15:52:16.444153"
     },
     {
         "subject": "There",
-        "current_fact": "are currently 7 open tickets. The tickets include bug reports from Ahmed Ali, Mona Adel, Aya Gamal, and Heba Ahmed, as well as feature requests from Youssef Ibrahim and Nour Hassan, and a general question from Mostafa Ali. The priorities of these tickets range from High to Low, with the majority being either High or Medium priority.",
-        "version": 1,
-        "history": [],
+        "current_fact": "are 7 open tickets. The details of these tickets are as follows: - Ticket ID: 1, Customer Name: Ahmed Ali, Issue: Login API returns 500 error, Category: Bug Report, Priority: High - Ticket ID: 4, Customer Name: Mona Adel, Issue: Profile page crashes, Category: Bug Report, Priority: High - Ticket ID: 5, Customer Name: Youssef Ibrahim, Issue: Need export to Excel, Category: Feature Request, Priority: Medium - Ticket ID: 8, Customer Name: Aya Gamal, Issue: Navbar overlaps content, Category: Bug Report, Priority: Medium - Ticket ID: 10, Customer Name: Heba Ahmed, Issue: Cannot upload image, Category: Bug Report, Priority: High - Ticket ID: 11, Customer Name: Mostafa Ali, Issue: Refund process question, Category: General Question, Priority: Low - Ticket ID: 14, Customer Name: Nour Hassan, Issue: Add Arabic language, Category: Feature Request, Priority: Medium",
+        "version": 13,
+        "history": [
+            {
+                "version": 1,
+                "fact": "are currently 7 open tickets. The tickets include bug reports from Ahmed Ali, Mona Adel, Aya Gamal, and Heba Ahmed, as well as feature requests from Youssef Ibrahim and Nour Hassan, and a general question from Mostafa Ali. The priorities of these tickets range from High to Low, with the majority being either High or Medium priority.",
+                "timestamp": "2026-08-07T00:26:52.243542"
+            },
+            {
+                "version": 2,
+                "fact": "are currently 7 open tickets. The tickets include bug reports from Ahmed Ali, Mona Adel, Aya Gamal, and Heba Ahmed, as well as feature requests from Youssef Ibrahim and Nour Hassan, and a general question from Mostafa Ali. The priorities of these tickets range from High to Low, with the majority being either High or Medium priority.",
+                "timestamp": "2026-08-18T15:44:09.282481"
+            },
+            {
+                "version": 3,
+                "fact": "are 7 open tickets. The details of these tickets are as follows: - Ticket ID: 1, Customer Name: Ahmed Ali, Issue: Login API returns 500 error, Category: Bug Report, Priority: High - Ticket ID: 4, Customer Name: Mona Adel, Issue: Profile page crashes, Category: Bug Report, Priority: High - Ticket ID: 5, Customer Name: Youssef Ibrahim, Issue: Need export to Excel, Category: Feature Request, Priority: Medium - Ticket ID: 8, Customer Name: Aya Gamal, Issue: Navbar overlaps content, Category: Bug Report, Priority: Medium - Ticket ID: 10, Customer Name: Heba Ahmed, Issue: Cannot upload image, Category: Bug Report, Priority: High - Ticket ID: 11, Customer Name: Mostafa Ali, Issue: Refund process question, Category: General Question, Priority: Low - Ticket ID: 14, Customer Name: Nour Hassan, Issue: Add Arabic language, Category: Feature Request, Priority: Medium",
+                "timestamp": "2026-08-18T15:44:09.290536"
+            },
+            {
+                "version": 4,
+                "fact": "are 7 open tickets. The details of these tickets are as follows: - Ticket ID: 1, Customer Name: Ahmed Ali, Issue: Login API returns 500 error, Category: Bug Report, Priority: High - Ticket ID: 4, Customer Name: Mona Adel, Issue: Profile page crashes, Category: Bug Report, Priority: High - Ticket ID: 5, Customer Name: Youssef Ibrahim, Issue: Need export to Excel, Category: Feature Request, Priority: Medium - Ticket ID: 8, Customer Name: Aya Gamal, Issue: Navbar overlaps content, Category: Bug Report, Priority: Medium - Ticket ID: 10, Customer Name: Heba Ahmed, Issue: Cannot upload image, Category: Bug Report, Priority: High - Ticket ID: 11, Customer Name: Mostafa Ali, Issue: Refund process question, Category: General Question, Priority: Low - Ticket ID: 14, Customer Name: Nour Hassan, Issue: Add Arabic language, Category: Feature Request, Priority: Medium",
+                "timestamp": "2026-08-18T15:44:09.308739"
+            },
+            {
+                "version": 5,
+                "fact": "are currently 7 open tickets. The tickets include bug reports from Ahmed Ali, Mona Adel, Aya Gamal, and Heba Ahmed, as well as feature requests from Youssef Ibrahim and Nour Hassan, and a general question from Mostafa Ali. The priorities of these tickets range from High to Low, with the majority being either High or Medium priority.",
+                "timestamp": "2026-08-18T15:48:23.911003"
+            },
+            {
+                "version": 6,
+                "fact": "are 7 open tickets. The details of these tickets are as follows: - Ticket ID: 1, Customer Name: Ahmed Ali, Issue: Login API returns 500 error, Category: Bug Report, Priority: High - Ticket ID: 4, Customer Name: Mona Adel, Issue: Profile page crashes, Category: Bug Report, Priority: High - Ticket ID: 5, Customer Name: Youssef Ibrahim, Issue: Need export to Excel, Category: Feature Request, Priority: Medium - Ticket ID: 8, Customer Name: Aya Gamal, Issue: Navbar overlaps content, Category: Bug Report, Priority: Medium - Ticket ID: 10, Customer Name: Heba Ahmed, Issue: Cannot upload image, Category: Bug Report, Priority: High - Ticket ID: 11, Customer Name: Mostafa Ali, Issue: Refund process question, Category: General Question, Priority: Low - Ticket ID: 14, Customer Name: Nour Hassan, Issue: Add Arabic language, Category: Feature Request, Priority: Medium",
+                "timestamp": "2026-08-18T15:48:23.926681"
+            },
+            {
+                "version": 7,
+                "fact": "are 7 open tickets. The details of these tickets are as follows: - Ticket ID: 1, Customer Name: Ahmed Ali, Issue: Login API returns 500 error, Category: Bug Report, Priority: High - Ticket ID: 4, Customer Name: Mona Adel, Issue: Profile page crashes, Category: Bug Report, Priority: High - Ticket ID: 5, Customer Name: Youssef Ibrahim, Issue: Need export to Excel, Category: Feature Request, Priority: Medium - Ticket ID: 8, Customer Name: Aya Gamal, Issue: Navbar overlaps content, Category: Bug Report, Priority: Medium - Ticket ID: 10, Customer Name: Heba Ahmed, Issue: Cannot upload image, Category: Bug Report, Priority: High - Ticket ID: 11, Customer Name: Mostafa Ali, Issue: Refund process question, Category: General Question, Priority: Low - Ticket ID: 14, Customer Name: Nour Hassan, Issue: Add Arabic language, Category: Feature Request, Priority: Medium",
+                "timestamp": "2026-08-18T15:48:23.951154"
+            },
+            {
+                "version": 8,
+                "fact": "are currently 7 open tickets. The tickets include bug reports from Ahmed Ali, Mona Adel, Aya Gamal, and Heba Ahmed, as well as feature requests from Youssef Ibrahim and Nour Hassan, and a general question from Mostafa Ali. The priorities of these tickets range from High to Low, with the majority being either High or Medium priority.",
+                "timestamp": "2026-08-18T15:50:40.714161"
+            },
+            {
+                "version": 9,
+                "fact": "are 7 open tickets. The details of these tickets are as follows: - Ticket ID: 1, Customer Name: Ahmed Ali, Issue: Login API returns 500 error, Category: Bug Report, Priority: High - Ticket ID: 4, Customer Name: Mona Adel, Issue: Profile page crashes, Category: Bug Report, Priority: High - Ticket ID: 5, Customer Name: Youssef Ibrahim, Issue: Need export to Excel, Category: Feature Request, Priority: Medium - Ticket ID: 8, Customer Name: Aya Gamal, Issue: Navbar overlaps content, Category: Bug Report, Priority: Medium - Ticket ID: 10, Customer Name: Heba Ahmed, Issue: Cannot upload image, Category: Bug Report, Priority: High - Ticket ID: 11, Customer Name: Mostafa Ali, Issue: Refund process question, Category: General Question, Priority: Low - Ticket ID: 14, Customer Name: Nour Hassan, Issue: Add Arabic language, Category: Feature Request, Priority: Medium",
+                "timestamp": "2026-08-18T15:50:40.729891"
+            },
+            {
+                "version": 10,
+                "fact": "are 7 open tickets. The details of these tickets are as follows: - Ticket ID: 1, Customer Name: Ahmed Ali, Issue: Login API returns 500 error, Category: Bug Report, Priority: High - Ticket ID: 4, Customer Name: Mona Adel, Issue: Profile page crashes, Category: Bug Report, Priority: High - Ticket ID: 5, Customer Name: Youssef Ibrahim, Issue: Need export to Excel, Category: Feature Request, Priority: Medium - Ticket ID: 8, Customer Name: Aya Gamal, Issue: Navbar overlaps content, Category: Bug Report, Priority: Medium - Ticket ID: 10, Customer Name: Heba Ahmed, Issue: Cannot upload image, Category: Bug Report, Priority: High - Ticket ID: 11, Customer Name: Mostafa Ali, Issue: Refund process question, Category: General Question, Priority: Low - Ticket ID: 14, Customer Name: Nour Hassan, Issue: Add Arabic language, Category: Feature Request, Priority: Medium",
+                "timestamp": "2026-08-18T15:50:40.755144"
+            },
+            {
+                "version": 11,
+                "fact": "are currently 7 open tickets. The tickets include bug reports from Ahmed Ali, Mona Adel, Aya Gamal, and Heba Ahmed, as well as feature requests from Youssef Ibrahim and Nour Hassan, and a general question from Mostafa Ali. The priorities of these tickets range from High to Low, with the majority being either High or Medium priority.",
+                "timestamp": "2026-08-18T15:52:16.399091"
+            },
+            {
+                "version": 12,
+                "fact": "are 7 open tickets. The details of these tickets are as follows: - Ticket ID: 1, Customer Name: Ahmed Ali, Issue: Login API returns 500 error, Category: Bug Report, Priority: High - Ticket ID: 4, Customer Name: Mona Adel, Issue: Profile page crashes, Category: Bug Report, Priority: High - Ticket ID: 5, Customer Name: Youssef Ibrahim, Issue: Need export to Excel, Category: Feature Request, Priority: Medium - Ticket ID: 8, Customer Name: Aya Gamal, Issue: Navbar overlaps content, Category: Bug Report, Priority: Medium - Ticket ID: 10, Customer Name: Heba Ahmed, Issue: Cannot upload image, Category: Bug Report, Priority: High - Ticket ID: 11, Customer Name: Mostafa Ali, Issue: Refund process question, Category: General Question, Priority: Low - Ticket ID: 14, Customer Name: Nour Hassan, Issue: Add Arabic language, Category: Feature Request, Priority: Medium",
+                "timestamp": "2026-08-18T15:52:16.418677"
+            }
+        ],
         "created_at": "2026-08-07T00:26:52.243533",
-        "last_updated": "2026-08-07T00:26:52.243542"
+        "last_updated": "2026-08-18T15:52:16.447994"
+    },
+    {
+        "subject": "get_ticket:",
+        "current_fact": "{'success': True, 'ticket': {'ticket_id': 1, 'customer_name': 'Ahmed Ali', 'issue': 'Login API returns 500 error', 'category': 'Bug Report', 'status': 'Open', 'priority': 'High', 'team_name': 'Backend'}}",
+        "version": 55,
+        "history": [
+            {
+                "version": 1,
+                "fact": "{'success': True, 'ticket': {'ticket_id': 1, 'customer_name': 'Ahmed Ali', 'issue': 'Login API returns 500 error', 'category': 'Bug Report', 'status': 'Open', 'priority': 'High', 'team_name': 'Backend'}}",
+                "timestamp": "2026-08-18T15:44:09.284140"
+            },
+            {
+                "version": 2,
+                "fact": "{'success': True, 'ticket': {'ticket_id': 1, 'customer_name': 'Ahmed Ali', 'issue': 'Login API returns 500 error', 'category': 'Bug Report', 'status': 'Open', 'priority': 'High', 'team_name': 'Backend'}}",
+                "timestamp": "2026-08-18T15:44:09.294279"
+            },
+            {
+                "version": 3,
+                "fact": "{'success': True, 'ticket': {'ticket_id': 1, 'customer_name': 'Ahmed Ali', 'issue': 'Login API returns 500 error', 'category': 'Bug Report', 'status': 'Open', 'priority': 'High', 'team_name': 'Backend'}}",
+                "timestamp": "2026-08-18T15:44:09.301398"
+            },
+            {
+                "version": 4,
+                "fact": "{'success': True, 'ticket': {'ticket_id': 1, 'customer_name': 'Ahmed Ali', 'issue': 'Login API returns 500 error', 'category': 'Bug Report', 'status': 'Open', 'priority': 'High', 'team_name': 'Backend'}}",
+                "timestamp": "2026-08-18T15:44:09.312722"
+            },
+            {
+                "version": 5,
+                "fact": "{'success': True, 'ticket': {'ticket_id': 2, 'customer_name': 'Sara Mohamed', 'issue': 'Add dark mode', 'category': 'Feature Request', 'status': 'Pending', 'priority': 'Medium', 'team_name': 'Product'}}",
+                "timestamp": "2026-08-18T15:44:09.318781"
+            },
+            {
+                "version": 6,
+                "fact": "{'success': True, 'ticket': {'ticket_id': 3, 'customer_name': 'Omar Hassan', 'issue': 'How can I change my password?', 'category': 'General Question', 'status': 'Closed', 'priority': 'Low', 'team_name': 'Support'}}",
+                "timestamp": "2026-08-18T15:44:09.323043"
+            },
+            {
+                "version": 7,
+                "fact": "{'success': True, 'ticket': {'ticket_id': 4, 'customer_name': 'Mona Adel', 'issue': 'Profile page crashes', 'category': 'Bug Report', 'status': 'Open', 'priority': 'High', 'team_name': 'Frontend'}}",
+                "timestamp": "2026-08-18T15:44:09.328335"
+            },
+            {
+                "version": 8,
+                "fact": "{'success': True, 'ticket': {'ticket_id': 2, 'customer_name': 'Sara Mohamed', 'issue': 'Add dark mode', 'category': 'Feature Request', 'status': 'Pending', 'priority': 'Medium', 'team_name': 'Product'}}",
+                "timestamp": "2026-08-18T15:44:09.332477"
+            },
+            {
+                "version": 9,
+                "fact": "{'success': True, 'ticket': {'ticket_id': 3, 'customer_name': 'Omar Hassan', 'issue': 'How can I change my password?', 'category': 'General Question', 'status': 'Closed', 'priority': 'Low', 'team_name': 'Support'}}",
+                "timestamp": "2026-08-18T15:44:09.338465"
+            },
+            {
+                "version": 10,
+                "fact": "{'success': True, 'ticket': {'ticket_id': 4, 'customer_name': 'Mona Adel', 'issue': 'Profile page crashes', 'category': 'Bug Report', 'status': 'Open', 'priority': 'High', 'team_name': 'Frontend'}}",
+                "timestamp": "2026-08-18T15:44:09.344200"
+            },
+            {
+                "version": 11,
+                "fact": "{'success': True, 'ticket': {'ticket_id': 5, 'customer_name': 'Youssef Ibrahim', 'issue': 'Need export to Excel', 'category': 'Feature Request', 'status': 'Open', 'priority': 'Medium', 'team_name': 'Product'}}",
+                "timestamp": "2026-08-18T15:44:09.349923"
+            },
+            {
+                "version": 12,
+                "fact": "{'success': True, 'ticket': {'ticket_id': 5, 'customer_name': 'Youssef Ibrahim', 'issue': 'Need export to Excel', 'category': 'Feature Request', 'status': 'Open', 'priority': 'Medium', 'team_name': 'Product'}}",
+                "timestamp": "2026-08-18T15:44:09.351926"
+            },
+            {
+                "version": 13,
+                "fact": "{'success': True, 'ticket': {'ticket_id': 6, 'customer_name': 'Nada Samir', 'issue': 'Payment confirmation missing', 'category': 'Bug Report', 'status': 'Pending', 'priority': 'High', 'team_name': 'Backend'}}",
+                "timestamp": "2026-08-18T15:44:09.356289"
+            },
+            {
+                "version": 14,
+                "fact": "{'success': True, 'ticket': {'ticket_id': 1, 'customer_name': 'Ahmed Ali', 'issue': 'Login API returns 500 error', 'category': 'Bug Report', 'status': 'Open', 'priority': 'High', 'team_name': 'Backend'}}",
+                "timestamp": "2026-08-18T15:48:23.913427"
+            },
+            {
+                "version": 15,
+                "fact": "{'success': True, 'ticket': {'ticket_id': 1, 'customer_name': 'Ahmed Ali', 'issue': 'Login API returns 500 error', 'category': 'Bug Report', 'status': 'Open', 'priority': 'High', 'team_name': 'Backend'}}",
+                "timestamp": "2026-08-18T15:48:23.930265"
+            },
+            {
+                "version": 16,
+                "fact": "{'success': True, 'ticket': {'ticket_id': 1, 'customer_name': 'Ahmed Ali', 'issue': 'Login API returns 500 error', 'category': 'Bug Report', 'status': 'Open', 'priority': 'High', 'team_name': 'Backend'}}",
+                "timestamp": "2026-08-18T15:48:23.940189"
+            },
+            {
+                "version": 17,
+                "fact": "{'success': True, 'ticket': {'ticket_id': 1, 'customer_name': 'Ahmed Ali', 'issue': 'Login API returns 500 error', 'category': 'Bug Report', 'status': 'Open', 'priority': 'High', 'team_name': 'Backend'}}",
+                "timestamp": "2026-08-18T15:48:23.959386"
+            },
+            {
+                "version": 18,
+                "fact": "{'success': True, 'ticket': {'ticket_id': 2, 'customer_name': 'Sara Mohamed', 'issue': 'Add dark mode', 'category': 'Feature Request', 'status': 'Pending', 'priority': 'Medium', 'team_name': 'Product'}}",
+                "timestamp": "2026-08-18T15:48:23.968080"
+            },
+            {
+                "version": 19,
+                "fact": "{'success': True, 'ticket': {'ticket_id': 3, 'customer_name': 'Omar Hassan', 'issue': 'How can I change my password?', 'category': 'General Question', 'status': 'Closed', 'priority': 'Low', 'team_name': 'Support'}}",
+                "timestamp": "2026-08-18T15:48:23.973787"
+            },
+            {
+                "version": 20,
+                "fact": "{'success': True, 'ticket': {'ticket_id': 4, 'customer_name': 'Mona Adel', 'issue': 'Profile page crashes', 'category': 'Bug Report', 'status': 'Open', 'priority': 'High', 'team_name': 'Frontend'}}",
+                "timestamp": "2026-08-18T15:48:23.980889"
+            },
+            {
+                "version": 21,
+                "fact": "{'success': True, 'ticket': {'ticket_id': 2, 'customer_name': 'Sara Mohamed', 'issue': 'Add dark mode', 'category': 'Feature Request', 'status': 'Pending', 'priority': 'Medium', 'team_name': 'Product'}}",
+                "timestamp": "2026-08-18T15:48:23.986520"
+            },
+            {
+                "version": 22,
+                "fact": "{'success': True, 'ticket': {'ticket_id': 3, 'customer_name': 'Omar Hassan', 'issue': 'How can I change my password?', 'category': 'General Question', 'status': 'Closed', 'priority': 'Low', 'team_name': 'Support'}}",
+                "timestamp": "2026-08-18T15:48:23.994405"
+            },
+            {
+                "version": 23,
+                "fact": "{'success': True, 'ticket': {'ticket_id': 4, 'customer_name': 'Mona Adel', 'issue': 'Profile page crashes', 'category': 'Bug Report', 'status': 'Open', 'priority': 'High', 'team_name': 'Frontend'}}",
+                "timestamp": "2026-08-18T15:48:24.002553"
+            },
+            {
+                "version": 24,
+                "fact": "{'success': True, 'ticket': {'ticket_id': 5, 'customer_name': 'Youssef Ibrahim', 'issue': 'Need export to Excel', 'category': 'Feature Request', 'status': 'Open', 'priority': 'Medium', 'team_name': 'Product'}}",
+                "timestamp": "2026-08-18T15:48:24.009801"
+            },
+            {
+                "version": 25,
+                "fact": "{'success': True, 'ticket': {'ticket_id': 5, 'customer_name': 'Youssef Ibrahim', 'issue': 'Need export to Excel', 'category': 'Feature Request', 'status': 'Open', 'priority': 'Medium', 'team_name': 'Product'}}",
+                "timestamp": "2026-08-18T15:48:24.012311"
+            },
+            {
+                "version": 26,
+                "fact": "{'success': True, 'ticket': {'ticket_id': 6, 'customer_name': 'Nada Samir', 'issue': 'Payment confirmation missing', 'category': 'Bug Report', 'status': 'Pending', 'priority': 'High', 'team_name': 'Backend'}}",
+                "timestamp": "2026-08-18T15:48:24.017819"
+            },
+            {
+                "version": 27,
+                "fact": "{'success': True, 'ticket': {'ticket_id': 1, 'customer_name': 'Ahmed Ali', 'issue': 'Login API returns 500 error', 'category': 'Bug Report', 'status': 'Open', 'priority': 'High', 'team_name': 'Backend'}}",
+                "timestamp": "2026-08-18T15:48:24.024503"
+            },
+            {
+                "version": 28,
+                "fact": "{'success': True, 'ticket': {'ticket_id': 1, 'customer_name': 'Ahmed Ali', 'issue': 'Login API returns 500 error', 'category': 'Bug Report', 'status': 'Open', 'priority': 'High', 'team_name': 'Backend'}}",
+                "timestamp": "2026-08-18T15:50:40.718654"
+            },
+            {
+                "version": 29,
+                "fact": "{'success': True, 'ticket': {'ticket_id': 1, 'customer_name': 'Ahmed Ali', 'issue': 'Login API returns 500 error', 'category': 'Bug Report', 'status': 'Open', 'priority': 'High', 'team_name': 'Backend'}}",
+                "timestamp": "2026-08-18T15:50:40.733482"
+            },
+            {
+                "version": 30,
+                "fact": "{'success': True, 'ticket': {'ticket_id': 1, 'customer_name': 'Ahmed Ali', 'issue': 'Login API returns 500 error', 'category': 'Bug Report', 'status': 'Open', 'priority': 'High', 'team_name': 'Backend'}}",
+                "timestamp": "2026-08-18T15:50:40.742297"
+            },
+            {
+                "version": 31,
+                "fact": "{'success': True, 'ticket': {'ticket_id': 1, 'customer_name': 'Ahmed Ali', 'issue': 'Login API returns 500 error', 'category': 'Bug Report', 'status': 'Open', 'priority': 'High', 'team_name': 'Backend'}}",
+                "timestamp": "2026-08-18T15:50:40.764259"
+            },
+            {
+                "version": 32,
+                "fact": "{'success': True, 'ticket': {'ticket_id': 2, 'customer_name': 'Sara Mohamed', 'issue': 'Add dark mode', 'category': 'Feature Request', 'status': 'Pending', 'priority': 'Medium', 'team_name': 'Product'}}",
+                "timestamp": "2026-08-18T15:50:40.774552"
+            },
+            {
+                "version": 33,
+                "fact": "{'success': True, 'ticket': {'ticket_id': 3, 'customer_name': 'Omar Hassan', 'issue': 'How can I change my password?', 'category': 'General Question', 'status': 'Closed', 'priority': 'Low', 'team_name': 'Support'}}",
+                "timestamp": "2026-08-18T15:50:40.783203"
+            },
+            {
+                "version": 34,
+                "fact": "{'success': True, 'ticket': {'ticket_id': 4, 'customer_name': 'Mona Adel', 'issue': 'Profile page crashes', 'category': 'Bug Report', 'status': 'Open', 'priority': 'High', 'team_name': 'Frontend'}}",
+                "timestamp": "2026-08-18T15:50:40.792933"
+            },
+            {
+                "version": 35,
+                "fact": "{'success': True, 'ticket': {'ticket_id': 2, 'customer_name': 'Sara Mohamed', 'issue': 'Add dark mode', 'category': 'Feature Request', 'status': 'Pending', 'priority': 'Medium', 'team_name': 'Product'}}",
+                "timestamp": "2026-08-18T15:50:40.800801"
+            },
+            {
+                "version": 36,
+                "fact": "{'success': True, 'ticket': {'ticket_id': 3, 'customer_name': 'Omar Hassan', 'issue': 'How can I change my password?', 'category': 'General Question', 'status': 'Closed', 'priority': 'Low', 'team_name': 'Support'}}",
+                "timestamp": "2026-08-18T15:50:40.811626"
+            },
+            {
+                "version": 37,
+                "fact": "{'success': True, 'ticket': {'ticket_id': 4, 'customer_name': 'Mona Adel', 'issue': 'Profile page crashes', 'category': 'Bug Report', 'status': 'Open', 'priority': 'High', 'team_name': 'Frontend'}}",
+                "timestamp": "2026-08-18T15:50:40.822252"
+            },
+            {
+                "version": 38,
+                "fact": "{'success': True, 'ticket': {'ticket_id': 5, 'customer_name': 'Youssef Ibrahim', 'issue': 'Need export to Excel', 'category': 'Feature Request', 'status': 'Open', 'priority': 'Medium', 'team_name': 'Product'}}",
+                "timestamp": "2026-08-18T15:50:40.834147"
+            },
+            {
+                "version": 39,
+                "fact": "{'success': True, 'ticket': {'ticket_id': 5, 'customer_name': 'Youssef Ibrahim', 'issue': 'Need export to Excel', 'category': 'Feature Request', 'status': 'Open', 'priority': 'Medium', 'team_name': 'Product'}}",
+                "timestamp": "2026-08-18T15:50:40.837428"
+            },
+            {
+                "version": 40,
+                "fact": "{'success': True, 'ticket': {'ticket_id': 6, 'customer_name': 'Nada Samir', 'issue': 'Payment confirmation missing', 'category': 'Bug Report', 'status': 'Pending', 'priority': 'High', 'team_name': 'Backend'}}",
+                "timestamp": "2026-08-18T15:50:40.846192"
+            },
+            {
+                "version": 41,
+                "fact": "{'success': True, 'ticket': {'ticket_id': 1, 'customer_name': 'Ahmed Ali', 'issue': 'Login API returns 500 error', 'category': 'Bug Report', 'status': 'Open', 'priority': 'High', 'team_name': 'Backend'}}",
+                "timestamp": "2026-08-18T15:50:40.852345"
+            },
+            {
+                "version": 42,
+                "fact": "{'success': True, 'ticket': {'ticket_id': 1, 'customer_name': 'Ahmed Ali', 'issue': 'Login API returns 500 error', 'category': 'Bug Report', 'status': 'Open', 'priority': 'High', 'team_name': 'Backend'}}",
+                "timestamp": "2026-08-18T15:52:16.403737"
+            },
+            {
+                "version": 43,
+                "fact": "{'success': True, 'ticket': {'ticket_id': 1, 'customer_name': 'Ahmed Ali', 'issue': 'Login API returns 500 error', 'category': 'Bug Report', 'status': 'Open', 'priority': 'High', 'team_name': 'Backend'}}",
+                "timestamp": "2026-08-18T15:52:16.422410"
+            },
+            {
+                "version": 44,
+                "fact": "{'success': True, 'ticket': {'ticket_id': 1, 'customer_name': 'Ahmed Ali', 'issue': 'Login API returns 500 error', 'category': 'Bug Report', 'status': 'Open', 'priority': 'High', 'team_name': 'Backend'}}",
+                "timestamp": "2026-08-18T15:52:16.433901"
+            },
+            {
+                "version": 45,
+                "fact": "{'success': True, 'ticket': {'ticket_id': 1, 'customer_name': 'Ahmed Ali', 'issue': 'Login API returns 500 error', 'category': 'Bug Report', 'status': 'Open', 'priority': 'High', 'team_name': 'Backend'}}",
+                "timestamp": "2026-08-18T15:52:16.457255"
+            },
+            {
+                "version": 46,
+                "fact": "{'success': True, 'ticket': {'ticket_id': 2, 'customer_name': 'Sara Mohamed', 'issue': 'Add dark mode', 'category': 'Feature Request', 'status': 'Pending', 'priority': 'Medium', 'team_name': 'Product'}}",
+                "timestamp": "2026-08-18T15:52:16.468638"
+            },
+            {
+                "version": 47,
+                "fact": "{'success': True, 'ticket': {'ticket_id': 3, 'customer_name': 'Omar Hassan', 'issue': 'How can I change my password?', 'category': 'General Question', 'status': 'Closed', 'priority': 'Low', 'team_name': 'Support'}}",
+                "timestamp": "2026-08-18T15:52:16.480053"
+            },
+            {
+                "version": 48,
+                "fact": "{'success': True, 'ticket': {'ticket_id': 4, 'customer_name': 'Mona Adel', 'issue': 'Profile page crashes', 'category': 'Bug Report', 'status': 'Open', 'priority': 'High', 'team_name': 'Frontend'}}",
+                "timestamp": "2026-08-18T15:52:16.487381"
+            },
+            {
+                "version": 49,
+                "fact": "{'success': True, 'ticket': {'ticket_id': 2, 'customer_name': 'Sara Mohamed', 'issue': 'Add dark mode', 'category': 'Feature Request', 'status': 'Pending', 'priority': 'Medium', 'team_name': 'Product'}}",
+                "timestamp": "2026-08-18T15:52:16.495132"
+            },
+            {
+                "version": 50,
+                "fact": "{'success': True, 'ticket': {'ticket_id': 3, 'customer_name': 'Omar Hassan', 'issue': 'How can I change my password?', 'category': 'General Question', 'status': 'Closed', 'priority': 'Low', 'team_name': 'Support'}}",
+                "timestamp": "2026-08-18T15:52:16.506812"
+            },
+            {
+                "version": 51,
+                "fact": "{'success': True, 'ticket': {'ticket_id': 4, 'customer_name': 'Mona Adel', 'issue': 'Profile page crashes', 'category': 'Bug Report', 'status': 'Open', 'priority': 'High', 'team_name': 'Frontend'}}",
+                "timestamp": "2026-08-18T15:52:16.518932"
+            },
+            {
+                "version": 52,
+                "fact": "{'success': True, 'ticket': {'ticket_id': 5, 'customer_name': 'Youssef Ibrahim', 'issue': 'Need export to Excel', 'category': 'Feature Request', 'status': 'Open', 'priority': 'Medium', 'team_name': 'Product'}}",
+                "timestamp": "2026-08-18T15:52:16.529811"
+            },
+            {
+                "version": 53,
+                "fact": "{'success': True, 'ticket': {'ticket_id': 5, 'customer_name': 'Youssef Ibrahim', 'issue': 'Need export to Excel', 'category': 'Feature Request', 'status': 'Open', 'priority': 'Medium', 'team_name': 'Product'}}",
+                "timestamp": "2026-08-18T15:52:16.533417"
+            },
+            {
+                "version": 54,
+                "fact": "{'success': True, 'ticket': {'ticket_id': 6, 'customer_name': 'Nada Samir', 'issue': 'Payment confirmation missing', 'category': 'Bug Report', 'status': 'Pending', 'priority': 'High', 'team_name': 'Backend'}}",
+                "timestamp": "2026-08-18T15:52:16.541359"
+            }
+        ],
+        "created_at": "2026-08-18T15:44:09.284132",
+        "last_updated": "2026-08-18T15:52:16.550106"
+    },
+    {
+        "subject": "The",
+        "current_fact": "details of ticket 6 are as follows: - Ticket ID: 6 - Customer Name: Nada Samir - Issue: Payment confirmation missing - Category: Bug Report - Status: Pending - Priority: High - Team Name: Backend",
+        "version": 48,
+        "history": [
+            {
+                "version": 1,
+                "fact": "details of ticket 1 are as follows: - Ticket ID: 1 - Customer Name: Ahmed Ali - Issue: Login API returns 500 error - Category: Bug Report - Status: Open - Priority: High - Team Name: Backend",
+                "timestamp": "2026-08-18T15:44:09.286255"
+            },
+            {
+                "version": 2,
+                "fact": "details of ticket 1 are as follows: - Ticket ID: 1 - Customer Name: Ahmed Ali - Issue: Login API returns 500 error - Category: Bug Report - Status: Open - Priority: High - Team Name: Backend",
+                "timestamp": "2026-08-18T15:44:09.296573"
+            },
+            {
+                "version": 3,
+                "fact": "details of ticket 1 are as follows: - Ticket ID: 1 - Customer Name: Ahmed Ali - Issue: Login API returns 500 error - Category: Bug Report - Status: Open - Priority: High - Team Name: Backend",
+                "timestamp": "2026-08-18T15:44:09.303640"
+            },
+            {
+                "version": 4,
+                "fact": "details of ticket 1 are as follows: - Ticket ID: 1 - Customer Name: Ahmed Ali - Issue: Login API returns 500 error - Category: Bug Report - Status: Open - Priority: High - Team Name: Backend",
+                "timestamp": "2026-08-18T15:44:09.314672"
+            },
+            {
+                "version": 5,
+                "fact": "details of ticket 2 are as follows: - Ticket ID: 2 - Customer Name: Sara Mohamed - Issue: Add dark mode - Category: Feature Request - Status: Pending - Priority: Medium - Team Name: Product",
+                "timestamp": "2026-08-18T15:44:09.321095"
+            },
+            {
+                "version": 6,
+                "fact": "details of ticket 3 are as follows: - Ticket ID: 3 - Customer Name: Omar Hassan - Issue: How can I change my password? - Category: General Question - Status: Closed - Priority: Low - Team Name: Support",
+                "timestamp": "2026-08-18T15:44:09.325411"
+            },
+            {
+                "version": 7,
+                "fact": "details of ticket 4 are as follows: - Ticket ID: 4 - Customer Name: Mona Adel - Issue: Profile page crashes - Category: Bug Report - Status: Open - Priority: High - Team Name: Frontend",
+                "timestamp": "2026-08-18T15:44:09.330683"
+            },
+            {
+                "version": 8,
+                "fact": "details of ticket 2 are as follows: - Ticket ID: 2 - Customer Name: Sara Mohamed - Issue: Add dark mode - Category: Feature Request - Status: Pending - Priority: Medium - Team Name: Product",
+                "timestamp": "2026-08-18T15:44:09.334169"
+            },
+            {
+                "version": 9,
+                "fact": "details of ticket 3 are as follows: - Ticket ID: 3 - Customer Name: Omar Hassan - Issue: How can I change my password? - Category: General Question - Status: Closed - Priority: Low - Team Name: Support",
+                "timestamp": "2026-08-18T15:44:09.340122"
+            },
+            {
+                "version": 10,
+                "fact": "details of ticket 4 are as follows: - Ticket ID: 4 - Customer Name: Mona Adel - Issue: Profile page crashes - Category: Bug Report - Status: Open - Priority: High - Team Name: Frontend",
+                "timestamp": "2026-08-18T15:44:09.346115"
+            },
+            {
+                "version": 11,
+                "fact": "details of ticket 5 are as follows: - Ticket ID: 5 - Customer Name: Youssef Ibrahim - Issue: Need export to Excel - Category: Feature Request - Status: Open - Priority: Medium - Team Name: Product",
+                "timestamp": "2026-08-18T15:44:09.354523"
+            },
+            {
+                "version": 12,
+                "fact": "details of ticket 6 are as follows: - Ticket ID: 6 - Customer Name: Nada Samir - Issue: Payment confirmation missing - Category: Bug Report - Status: Pending - Priority: High - Team Name: Backend",
+                "timestamp": "2026-08-18T15:44:09.358811"
+            },
+            {
+                "version": 13,
+                "fact": "details of ticket 1 are as follows: - Ticket ID: 1 - Customer Name: Ahmed Ali - Issue: Login API returns 500 error - Category: Bug Report - Status: Open - Priority: High - Team Name: Backend",
+                "timestamp": "2026-08-18T15:48:23.917587"
+            },
+            {
+                "version": 14,
+                "fact": "details of ticket 1 are as follows: - Ticket ID: 1 - Customer Name: Ahmed Ali - Issue: Login API returns 500 error - Category: Bug Report - Status: Open - Priority: High - Team Name: Backend",
+                "timestamp": "2026-08-18T15:48:23.933914"
+            },
+            {
+                "version": 15,
+                "fact": "details of ticket 1 are as follows: - Ticket ID: 1 - Customer Name: Ahmed Ali - Issue: Login API returns 500 error - Category: Bug Report - Status: Open - Priority: High - Team Name: Backend",
+                "timestamp": "2026-08-18T15:48:23.943130"
+            },
+            {
+                "version": 16,
+                "fact": "details of ticket 1 are as follows: - Ticket ID: 1 - Customer Name: Ahmed Ali - Issue: Login API returns 500 error - Category: Bug Report - Status: Open - Priority: High - Team Name: Backend",
+                "timestamp": "2026-08-18T15:48:23.961828"
+            },
+            {
+                "version": 17,
+                "fact": "details of ticket 2 are as follows: - Ticket ID: 2 - Customer Name: Sara Mohamed - Issue: Add dark mode - Category: Feature Request - Status: Pending - Priority: Medium - Team Name: Product",
+                "timestamp": "2026-08-18T15:48:23.970991"
+            },
+            {
+                "version": 18,
+                "fact": "details of ticket 3 are as follows: - Ticket ID: 3 - Customer Name: Omar Hassan - Issue: How can I change my password? - Category: General Question - Status: Closed - Priority: Low - Team Name: Support",
+                "timestamp": "2026-08-18T15:48:23.977768"
+            },
+            {
+                "version": 19,
+                "fact": "details of ticket 4 are as follows: - Ticket ID: 4 - Customer Name: Mona Adel - Issue: Profile page crashes - Category: Bug Report - Status: Open - Priority: High - Team Name: Frontend",
+                "timestamp": "2026-08-18T15:48:23.983326"
+            },
+            {
+                "version": 20,
+                "fact": "details of ticket 2 are as follows: - Ticket ID: 2 - Customer Name: Sara Mohamed - Issue: Add dark mode - Category: Feature Request - Status: Pending - Priority: Medium - Team Name: Product",
+                "timestamp": "2026-08-18T15:48:23.989608"
+            },
+            {
+                "version": 21,
+                "fact": "details of ticket 3 are as follows: - Ticket ID: 3 - Customer Name: Omar Hassan - Issue: How can I change my password? - Category: General Question - Status: Closed - Priority: Low - Team Name: Support",
+                "timestamp": "2026-08-18T15:48:23.996874"
+            },
+            {
+                "version": 22,
+                "fact": "details of ticket 4 are as follows: - Ticket ID: 4 - Customer Name: Mona Adel - Issue: Profile page crashes - Category: Bug Report - Status: Open - Priority: High - Team Name: Frontend",
+                "timestamp": "2026-08-18T15:48:24.005227"
+            },
+            {
+                "version": 23,
+                "fact": "details of ticket 5 are as follows: - Ticket ID: 5 - Customer Name: Youssef Ibrahim - Issue: Need export to Excel - Category: Feature Request - Status: Open - Priority: Medium - Team Name: Product",
+                "timestamp": "2026-08-18T15:48:24.015307"
+            },
+            {
+                "version": 24,
+                "fact": "details of ticket 6 are as follows: - Ticket ID: 6 - Customer Name: Nada Samir - Issue: Payment confirmation missing - Category: Bug Report - Status: Pending - Priority: High - Team Name: Backend",
+                "timestamp": "2026-08-18T15:48:24.020618"
+            },
+            {
+                "version": 25,
+                "fact": "details of ticket 1 are as follows: - Ticket ID: 1 - Customer Name: Ahmed Ali - Issue: Login API returns 500 error - Category: Bug Report - Status: Open - Priority: High - Team Name: Backend",
+                "timestamp": "2026-08-18T15:50:40.722109"
+            },
+            {
+                "version": 26,
+                "fact": "details of ticket 1 are as follows: - Ticket ID: 1 - Customer Name: Ahmed Ali - Issue: Login API returns 500 error - Category: Bug Report - Status: Open - Priority: High - Team Name: Backend",
+                "timestamp": "2026-08-18T15:50:40.736544"
+            },
+            {
+                "version": 27,
+                "fact": "details of ticket 1 are as follows: - Ticket ID: 1 - Customer Name: Ahmed Ali - Issue: Login API returns 500 error - Category: Bug Report - Status: Open - Priority: High - Team Name: Backend",
+                "timestamp": "2026-08-18T15:50:40.745047"
+            },
+            {
+                "version": 28,
+                "fact": "details of ticket 1 are as follows: - Ticket ID: 1 - Customer Name: Ahmed Ali - Issue: Login API returns 500 error - Category: Bug Report - Status: Open - Priority: High - Team Name: Backend",
+                "timestamp": "2026-08-18T15:50:40.767686"
+            },
+            {
+                "version": 29,
+                "fact": "details of ticket 2 are as follows: - Ticket ID: 2 - Customer Name: Sara Mohamed - Issue: Add dark mode - Category: Feature Request - Status: Pending - Priority: Medium - Team Name: Product",
+                "timestamp": "2026-08-18T15:50:40.778334"
+            },
+            {
+                "version": 30,
+                "fact": "details of ticket 3 are as follows: - Ticket ID: 3 - Customer Name: Omar Hassan - Issue: How can I change my password? - Category: General Question - Status: Closed - Priority: Low - Team Name: Support",
+                "timestamp": "2026-08-18T15:50:40.788118"
+            },
+            {
+                "version": 31,
+                "fact": "details of ticket 4 are as follows: - Ticket ID: 4 - Customer Name: Mona Adel - Issue: Profile page crashes - Category: Bug Report - Status: Open - Priority: High - Team Name: Frontend",
+                "timestamp": "2026-08-18T15:50:40.796695"
+            },
+            {
+                "version": 32,
+                "fact": "details of ticket 2 are as follows: - Ticket ID: 2 - Customer Name: Sara Mohamed - Issue: Add dark mode - Category: Feature Request - Status: Pending - Priority: Medium - Team Name: Product",
+                "timestamp": "2026-08-18T15:50:40.804123"
+            },
+            {
+                "version": 33,
+                "fact": "details of ticket 3 are as follows: - Ticket ID: 3 - Customer Name: Omar Hassan - Issue: How can I change my password? - Category: General Question - Status: Closed - Priority: Low - Team Name: Support",
+                "timestamp": "2026-08-18T15:50:40.815120"
+            },
+            {
+                "version": 34,
+                "fact": "details of ticket 4 are as follows: - Ticket ID: 4 - Customer Name: Mona Adel - Issue: Profile page crashes - Category: Bug Report - Status: Open - Priority: High - Team Name: Frontend",
+                "timestamp": "2026-08-18T15:50:40.826158"
+            },
+            {
+                "version": 35,
+                "fact": "details of ticket 5 are as follows: - Ticket ID: 5 - Customer Name: Youssef Ibrahim - Issue: Need export to Excel - Category: Feature Request - Status: Open - Priority: Medium - Team Name: Product",
+                "timestamp": "2026-08-18T15:50:40.841699"
+            },
+            {
+                "version": 36,
+                "fact": "details of ticket 6 are as follows: - Ticket ID: 6 - Customer Name: Nada Samir - Issue: Payment confirmation missing - Category: Bug Report - Status: Pending - Priority: High - Team Name: Backend",
+                "timestamp": "2026-08-18T15:50:40.849278"
+            },
+            {
+                "version": 37,
+                "fact": "details of ticket 1 are as follows: - Ticket ID: 1 - Customer Name: Ahmed Ali - Issue: Login API returns 500 error - Category: Bug Report - Status: Open - Priority: High - Team Name: Backend",
+                "timestamp": "2026-08-18T15:52:16.409340"
+            },
+            {
+                "version": 38,
+                "fact": "details of ticket 1 are as follows: - Ticket ID: 1 - Customer Name: Ahmed Ali - Issue: Login API returns 500 error - Category: Bug Report - Status: Open - Priority: High - Team Name: Backend",
+                "timestamp": "2026-08-18T15:52:16.427392"
+            },
+            {
+                "version": 39,
+                "fact": "details of ticket 1 are as follows: - Ticket ID: 1 - Customer Name: Ahmed Ali - Issue: Login API returns 500 error - Category: Bug Report - Status: Open - Priority: High - Team Name: Backend",
+                "timestamp": "2026-08-18T15:52:16.437426"
+            },
+            {
+                "version": 40,
+                "fact": "details of ticket 1 are as follows: - Ticket ID: 1 - Customer Name: Ahmed Ali - Issue: Login API returns 500 error - Category: Bug Report - Status: Open - Priority: High - Team Name: Backend",
+                "timestamp": "2026-08-18T15:52:16.461491"
+            },
+            {
+                "version": 41,
+                "fact": "details of ticket 2 are as follows: - Ticket ID: 2 - Customer Name: Sara Mohamed - Issue: Add dark mode - Category: Feature Request - Status: Pending - Priority: Medium - Team Name: Product",
+                "timestamp": "2026-08-18T15:52:16.472627"
+            },
+            {
+                "version": 42,
+                "fact": "details of ticket 3 are as follows: - Ticket ID: 3 - Customer Name: Omar Hassan - Issue: How can I change my password? - Category: General Question - Status: Closed - Priority: Low - Team Name: Support",
+                "timestamp": "2026-08-18T15:52:16.483672"
+            },
+            {
+                "version": 43,
+                "fact": "details of ticket 4 are as follows: - Ticket ID: 4 - Customer Name: Mona Adel - Issue: Profile page crashes - Category: Bug Report - Status: Open - Priority: High - Team Name: Frontend",
+                "timestamp": "2026-08-18T15:52:16.491212"
+            },
+            {
+                "version": 44,
+                "fact": "details of ticket 2 are as follows: - Ticket ID: 2 - Customer Name: Sara Mohamed - Issue: Add dark mode - Category: Feature Request - Status: Pending - Priority: Medium - Team Name: Product",
+                "timestamp": "2026-08-18T15:52:16.499038"
+            },
+            {
+                "version": 45,
+                "fact": "details of ticket 3 are as follows: - Ticket ID: 3 - Customer Name: Omar Hassan - Issue: How can I change my password? - Category: General Question - Status: Closed - Priority: Low - Team Name: Support",
+                "timestamp": "2026-08-18T15:52:16.510639"
+            },
+            {
+                "version": 46,
+                "fact": "details of ticket 4 are as follows: - Ticket ID: 4 - Customer Name: Mona Adel - Issue: Profile page crashes - Category: Bug Report - Status: Open - Priority: High - Team Name: Frontend",
+                "timestamp": "2026-08-18T15:52:16.522631"
+            },
+            {
+                "version": 47,
+                "fact": "details of ticket 5 are as follows: - Ticket ID: 5 - Customer Name: Youssef Ibrahim - Issue: Need export to Excel - Category: Feature Request - Status: Open - Priority: Medium - Team Name: Product",
+                "timestamp": "2026-08-18T15:52:16.537380"
+            }
+        ],
+        "created_at": "2026-08-18T15:44:09.286230",
+        "last_updated": "2026-08-18T15:52:16.545444"
+    },
+    {
+        "subject": "ticket",
+        "current_fact": "5",
+        "version": 20,
+        "history": [
+            {
+                "version": 1,
+                "fact": "1",
+                "timestamp": "2026-08-18T15:44:09.298929"
+            },
+            {
+                "version": 2,
+                "fact": "2",
+                "timestamp": "2026-08-18T15:44:09.316979"
+            },
+            {
+                "version": 3,
+                "fact": "3",
+                "timestamp": "2026-08-18T15:44:09.336040"
+            },
+            {
+                "version": 4,
+                "fact": "4",
+                "timestamp": "2026-08-18T15:44:09.342116"
+            },
+            {
+                "version": 5,
+                "fact": "5",
+                "timestamp": "2026-08-18T15:44:09.347958"
+            },
+            {
+                "version": 6,
+                "fact": "1",
+                "timestamp": "2026-08-18T15:48:23.937951"
+            },
+            {
+                "version": 7,
+                "fact": "2",
+                "timestamp": "2026-08-18T15:48:23.964050"
+            },
+            {
+                "version": 8,
+                "fact": "3",
+                "timestamp": "2026-08-18T15:48:23.992005"
+            },
+            {
+                "version": 9,
+                "fact": "4",
+                "timestamp": "2026-08-18T15:48:23.999299"
+            },
+            {
+                "version": 10,
+                "fact": "5",
+                "timestamp": "2026-08-18T15:48:24.007462"
+            },
+            {
+                "version": 11,
+                "fact": "1",
+                "timestamp": "2026-08-18T15:50:40.739435"
+            },
+            {
+                "version": 12,
+                "fact": "2",
+                "timestamp": "2026-08-18T15:50:40.771518"
+            },
+            {
+                "version": 13,
+                "fact": "3",
+                "timestamp": "2026-08-18T15:50:40.808473"
+            },
+            {
+                "version": 14,
+                "fact": "4",
+                "timestamp": "2026-08-18T15:50:40.818473"
+            },
+            {
+                "version": 15,
+                "fact": "5",
+                "timestamp": "2026-08-18T15:50:40.829680"
+            },
+            {
+                "version": 16,
+                "fact": "1",
+                "timestamp": "2026-08-18T15:52:16.430695"
+            },
+            {
+                "version": 17,
+                "fact": "2",
+                "timestamp": "2026-08-18T15:52:16.465239"
+            },
+            {
+                "version": 18,
+                "fact": "3",
+                "timestamp": "2026-08-18T15:52:16.502913"
+            },
+            {
+                "version": 19,
+                "fact": "4",
+                "timestamp": "2026-08-18T15:52:16.515325"
+            }
+        ],
+        "created_at": "2026-08-18T15:44:09.298920",
+        "last_updated": "2026-08-18T15:52:16.526318"
+    },
+    {
+        "subject": "search",
+        "current_fact": "open tickets",
+        "version": 4,
+        "history": [
+            {
+                "version": 1,
+                "fact": "open tickets",
+                "timestamp": "2026-08-18T15:44:09.305242"
+            },
+            {
+                "version": 2,
+                "fact": "open tickets",
+                "timestamp": "2026-08-18T15:48:23.945634"
+            },
+            {
+                "version": 3,
+                "fact": "open tickets",
+                "timestamp": "2026-08-18T15:50:40.749286"
+            }
+        ],
+        "created_at": "2026-08-18T15:44:09.305237",
+        "last_updated": "2026-08-18T15:52:16.440687"
+    },
+    {
+        "subject": "what",
+        "current_fact": "was ticket 1 about?",
+        "version": 4,
+        "history": [
+            {
+                "version": 1,
+                "fact": "was ticket 1 about?",
+                "timestamp": "2026-08-18T15:44:09.310603"
+            },
+            {
+                "version": 2,
+                "fact": "was ticket 1 about?",
+                "timestamp": "2026-08-18T15:48:23.955121"
+            },
+            {
+                "version": 3,
+                "fact": "was ticket 1 about?",
+                "timestamp": "2026-08-18T15:50:40.758594"
+            }
+        ],
+        "created_at": "2026-08-18T15:44:09.310599",
+        "last_updated": "2026-08-18T15:52:16.451528"
+    },
+    {
+        "subject": "<think>",
+        "current_fact": "The user wants to retrieve information about \"ticket 1\". I need to check the available tools to see which one is appropriate for getting ticket details. The tool `get_ticket` seems to be the correct one. I will call `get_ticket` with the argument `ticket_id` set to \"1\". Tool: `get_ticket` Arguments: `{\"ticket_id\": \"1\"}` I must output only the JSON tool request. </think> { \"tool\": \"get_ticket\", \"arguments\": { \"ticket_id\": \"1\" } }",
+        "version": 3,
+        "history": [
+            {
+                "version": 1,
+                "fact": "The user is asking for \"ticket 1\". I need to check the available tools to see if there is a tool to get ticket details. Looking at the available tools: - `get_ticket`: This seems appropriate. - `search_open_tickets`: Not specific enough. - `search_by_team`: Not relevant. - `update_ticket_status`: Not relevant. - `generate_report`: Not relevant. - `dashboard_tool`: Not relevant. - `search_knowledge`: Not relevant. - `answer_from_knowledge`: Not relevant. - `answer_agentic_rag`: Not relevant. The tool `get_ticket` is the best match. I need to construct the JSON response for the tool call. The argument should likely be the ticket ID, which is \"1\". Tool: `get_ticket` Arguments: `{\"ticket_id\": \"1\"}` (Assuming the argument name is `ticket_id` based on common patterns, though the description is null. I will assume `ticket_id` or `id`. Usually, if the description is null, I have to guess or use a standard name. Let's look at the tool name `get_ticket`. It likely takes an ID. I will use `ticket_id`.) Wait, the prompt says \"You MUST use MCP tools when the user asks about: ticket details\". The user asked \"Get ticket 1\". I will call `get_ticket`. JSON structure: ```json { \"tool\": \"get_ticket\", \"arguments\": { \"ticket_id\": \"1\" } } ``` I will output this JSON. </think> { \"tool\": \"get_ticket\", \"arguments\": { \"ticket_id\": \"1\" } }",
+                "timestamp": "2026-08-18T15:50:40.855581"
+            },
+            {
+                "version": 2,
+                "fact": "The user is asking for \"ticket 1\". I need to check the available tools to see if there is a tool to get ticket details. Looking at the available tools: - `get_ticket`: This seems appropriate. - `search_open_tickets`: Not specific enough. - `search_by_team`: Not relevant. - `update_ticket_status`: Not relevant. - `generate_report`: Not relevant. - `dashboard_tool`: Not relevant. - `search_knowledge`: Not relevant. - `answer_from_knowledge`: Not relevant. - `answer_agentic_rag`: Not relevant. The tool `get_ticket` is the best match. I need to construct the JSON response for the tool call. The argument should likely be the ticket ID, which is \"1\". Tool: `get_ticket` Arguments: `{\"ticket_id\": \"1\"}` (Assuming the argument name is `ticket_id` based on common patterns, though the description is null. I will assume `ticket_id` or `id`. Usually, if the description is null, I have to guess or use a standard name. Let's look at the tool name `get_ticket`. It likely takes an ID. I will use `ticket_id`.) Wait, the prompt says \"You MUST use MCP tools when the user asks about: ticket details\". The user asked \"Get ticket 1\". I will call `get_ticket`. JSON structure: ```json { \"tool\": \"get_ticket\", \"arguments\": { \"ticket_id\": \"1\" } } ``` I will output this JSON. </think> { \"tool\": \"get_ticket\", \"arguments\": { \"ticket_id\": \"1\" } }",
+                "timestamp": "2026-08-18T15:52:16.553825"
+            }
+        ],
+        "created_at": "2026-08-18T15:50:40.855576",
+        "last_updated": "2026-08-18T15:52:16.557882"
     }
 ]

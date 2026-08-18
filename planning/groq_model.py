@@ -1,9 +1,8 @@
-import json
+from groq_settings import GROQ_MODEL
 import os
 from typing import Any, Type
 
 from dotenv import load_dotenv
-from groq import Groq
 from langchain_core.language_models.chat_models import BaseChatModel
 from langchain_core.messages import AIMessage, BaseMessage
 from langchain_core.outputs import ChatGeneration, ChatResult
@@ -13,11 +12,13 @@ from pydantic import BaseModel, ConfigDict
 
 load_dotenv()
 
+from groq import Groq
+
 
 class GroqChatModel(BaseChatModel):
     model_config = ConfigDict(arbitrary_types_allowed=True)
 
-    model_name: str = "llama-3.3-70b-versatile"
+    model_name: str = GROQ_MODEL
     temperature: float = 0.0
 
     def __init__(self, client: object | None = None, use_real_llm: bool | None = None, **kwargs):

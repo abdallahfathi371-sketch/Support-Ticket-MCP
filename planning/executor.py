@@ -26,7 +26,9 @@ from .metrics import get_collector, start_metrics, end_metrics
 load_dotenv()
 
 
-MODEL_NAME = "llama-3.3-70b-versatile"
+from groq_settings import GROQ_MODEL
+
+MODEL_NAME = GROQ_MODEL
 
 
 def get_groq_client() -> Groq:

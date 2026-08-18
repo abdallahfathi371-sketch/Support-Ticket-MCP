@@ -13,7 +13,7 @@ EMBEDDING_MODEL = os.getenv(
     "RAG_EMBEDDING_MODEL",
     "sentence-transformers/all-MiniLM-L6-v2",
 )
-GROQ_MODEL = os.getenv("GROQ_MODEL", "llama-3.3-70b-versatile")
+GROQ_MODEL = os.getenv("GROQ_MODEL", "qwen/qwen3.6-27b")
 
 CHUNK_SIZE = int(os.getenv("RAG_CHUNK_SIZE", "700"))
 CHUNK_OVERLAP = int(os.getenv("RAG_CHUNK_OVERLAP", "120"))

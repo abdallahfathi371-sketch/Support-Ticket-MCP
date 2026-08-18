@@ -12,7 +12,9 @@ from planning.models import Plan
 load_dotenv()
 
 
-MODEL_NAME = "llama-3.3-70b-versatile"
+from groq_settings import GROQ_MODEL
+
+MODEL_NAME = GROQ_MODEL
 
 
 def get_planner_llm() -> ChatGroq:
