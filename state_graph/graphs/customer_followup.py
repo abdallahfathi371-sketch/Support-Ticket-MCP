@@ -4,6 +4,7 @@ from typing import Any
 
 from ..common.graph_base import DurableGraphRunner
 from ..common.grounding import ground_customer_followup
+from ..common.llm_reasoning import generate_grounding_verdict
 from ..common.store import StateStore
 
 
@@ -272,8 +273,37 @@ def submit_customer_reply(
         grounding.evidence
     )
 
+    # ---------------------------------------------------------
+    # RAG: generate a grounded verdict from the retrieved
+    # policy evidence, instead of trusting keyword matching
+    # alone. Deterministic fallback keeps prior test behavior
+    # unchanged when STATE_GRAPH_USE_REAL_LLM is not set.
+    # ---------------------------------------------------------
+
+    rag_result = generate_grounding_verdict(
+        query=reply,
+        policies_checked=grounding.policies_checked,
+        evidence=grounding.evidence,
+    )
+
+    rag_verdict = rag_result["verdict"]
+
+    grounding_supported = (
+        rag_verdict.supported
+        if rag_result["llm_used"]
+        else grounding.supported
+    )
+
     state["grounding_supported"] = (
-        grounding.supported
+        grounding_supported
+    )
+
+    state["rag_llm_used"] = (
+        rag_result["llm_used"]
+    )
+
+    state["rag_rationale"] = (
+        rag_verdict.rationale
     )
 
     runner.transition(
@@ -294,7 +324,7 @@ def submit_customer_reply(
         _evaluate_hitl_requirement(
             ticket=None,
             grounding_supported=(
-                grounding.supported
+                grounding_supported
             ),
             react_success=False,
         )
@@ -589,8 +619,33 @@ async def submit_customer_reply_with_mcp(
         grounding.evidence
     )
 
+    # ---------------------------------------------------------
+    # RAG: generate a grounded verdict from the retrieved
+    # policy evidence, instead of trusting keyword matching
+    # alone. Deterministic fallback keeps prior test behavior
+    # unchanged when STATE_GRAPH_USE_REAL_LLM is not set.
+    # ---------------------------------------------------------
+
+    rag_result = generate_grounding_verdict(
+        query=reply,
+        policies_checked=grounding.policies_checked,
+        evidence=grounding.evidence,
+    )
+
+    rag_verdict = rag_result["verdict"]
+
     state["grounding_supported"] = (
-        grounding.supported
+        rag_verdict.supported
+        if rag_result["llm_used"]
+        else grounding.supported
+    )
+
+    state["rag_llm_used"] = (
+        rag_result["llm_used"]
+    )
+
+    state["rag_rationale"] = (
+        rag_verdict.rationale
     )
 
     runner.transition(

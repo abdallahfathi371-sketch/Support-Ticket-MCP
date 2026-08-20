@@ -643,3 +643,137 @@ Failure context:
         "llm_used": True,
         "plan": plan,
     }
+
+
+# ============================================================
+# RAG grounding-verdict schema
+#
+# This is the actual "RAG" LLM-call addition for the Customer
+# Follow-up graph: retrieved policy evidence (grounding.py) is
+# passed to the LLM, which generates a grounded verdict instead
+# of leaving the decision to raw keyword matching.
+# ============================================================
+
+class GroundingVerdict(BaseModel):
+    """
+    LLM-generated verdict over retrieved policy evidence.
+    """
+
+    supported: bool
+
+    rationale: str = Field(
+        min_length=3
+    )
+
+
+def _deterministic_grounding_verdict(
+    *,
+    policies_checked: list[str],
+    evidence: list[dict[str, Any]],
+) -> GroundingVerdict:
+    """
+    Deterministic fallback used by tests and local development.
+
+    Mirrors the previous keyword-matching behavior exactly, so
+    existing deterministic tests are unaffected.
+    """
+
+    supported = bool(
+        policies_checked
+        and evidence
+    )
+
+    return GroundingVerdict(
+        supported=supported,
+        rationale=(
+            "Deterministic fallback: supported because matching "
+            "policy evidence was retrieved."
+            if supported
+            else "Deterministic fallback: no matching policy "
+            "evidence was retrieved."
+        ),
+    )
+
+
+def generate_grounding_verdict(
+    *,
+    query: str,
+    policies_checked: list[str],
+    evidence: list[dict[str, Any]],
+) -> dict[str, Any]:
+    """
+    Retrieval-Augmented Generation over the retrieved policy evidence.
+
+    Real mode:
+        The LLM reads the retrieved evidence (from PolicyGrounder)
+        and generates a grounded supported/rationale verdict.
+
+    Test mode:
+        deterministic fallback identical to the prior keyword-only
+        behavior.
+    """
+
+    if not use_real_llm():
+
+        return {
+            "llm_used": False,
+            "verdict": _deterministic_grounding_verdict(
+                policies_checked=policies_checked,
+                evidence=evidence,
+            ),
+        }
+
+    llm = _get_llm()
+
+    evidence_text = json.dumps(
+        evidence,
+        ensure_ascii=False,
+    )
+
+    prompt = f"""
+You are grounding a customer follow-up reply against retrieved
+company policy evidence.
+
+Customer reply / query:
+{query}
+
+Policies checked:
+{json.dumps(policies_checked)}
+
+Retrieved evidence (from the policy files):
+{evidence_text}
+
+Rules:
+1. Base your verdict ONLY on the retrieved evidence above.
+2. Do NOT invent policy content that is not in the evidence.
+3. "supported" must be true only if the retrieved evidence
+   actually addresses the customer reply.
+4. Give a short rationale explaining your verdict using the
+   evidence.
+5. Return ONLY a JSON object: {{"supported": bool, "rationale": str}}
+"""
+
+    structured = llm.with_structured_output(
+        GroundingVerdict
+    )
+
+    verdict = structured.invoke(
+        [
+            (
+                "system",
+                (
+                    "You are a strict grounding verifier. Only "
+                    "use the supplied evidence."
+                ),
+            ),
+            (
+                "human",
+                prompt,
+            ),
+        ]
+    )
+
+    return {
+        "llm_used": True,
+        "verdict": verdict,
+    }

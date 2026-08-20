@@ -550,6 +550,58 @@ class StateStore:
 
         return failure_id
 
+    def mark_failure_investigating(
+        self,
+        failure_id: str,
+        admin_id: str,
+    ) -> None:
+        """
+        Move a failure ticket from OPEN to INVESTIGATING.
+
+        This is a distinct, real ticket status: an admin has
+        started looking at the failure but has not resolved it
+        yet. The graph run stays paused (run_status is untouched)
+        until resolve_failure() is called.
+        """
+
+        now = utc_now()
+
+        with self._connect() as conn:
+
+            row = conn.execute(
+                """
+                SELECT status
+                FROM failure_tickets
+                WHERE failure_id = ?
+                """,
+                (failure_id,),
+            ).fetchone()
+
+            if row is None:
+                raise ValueError(
+                    f"Failure ticket not found: {failure_id}"
+                )
+
+            if row["status"] != "OPEN":
+                raise ValueError(
+                    f"Failure ticket {failure_id} is not OPEN "
+                    f"(current status: {row['status']})"
+                )
+
+            conn.execute(
+                """
+                UPDATE failure_tickets
+                SET
+                    status = 'INVESTIGATING',
+                    admin_id = ?
+                WHERE failure_id = ?
+                """,
+                (
+                    admin_id,
+                    failure_id,
+                ),
+            )
+
     def resolve_failure(
         self,
         failure_id: str,
