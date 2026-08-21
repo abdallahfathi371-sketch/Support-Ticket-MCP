@@ -121,6 +121,35 @@ class StateStore:
                 CREATE INDEX IF NOT EXISTS
                 idx_failure_status
                 ON failure_tickets(status);
+
+                CREATE TABLE IF NOT EXISTS agent_chat_messages (
+                    message_id TEXT PRIMARY KEY,
+                    agent_name TEXT NOT NULL,
+                    user_id TEXT NOT NULL,
+                    role TEXT NOT NULL,
+                    message TEXT NOT NULL,
+                    created_at TEXT NOT NULL
+                );
+
+                CREATE INDEX IF NOT EXISTS
+                idx_agent_chat_lookup
+                ON agent_chat_messages(agent_name, user_id, created_at);
+
+                CREATE TABLE IF NOT EXISTS agent_tool_registry (
+                    agent_name TEXT NOT NULL,
+                    tool_name TEXT NOT NULL,
+                    enabled INTEGER NOT NULL DEFAULT 1,
+                    updated_at TEXT NOT NULL,
+                    PRIMARY KEY(agent_name, tool_name)
+                );
+
+                CREATE TABLE IF NOT EXISTS rag_documents (
+                    document_id TEXT PRIMARY KEY,
+                    title TEXT NOT NULL,
+                    content TEXT NOT NULL,
+                    source TEXT NOT NULL DEFAULT 'uploaded',
+                    created_at TEXT NOT NULL
+                );
                 """
             )
 
@@ -318,6 +347,160 @@ class StateStore:
         )
 
         return result
+
+    def save_chat_message(
+        self,
+        agent_name: str,
+        user_id: str,
+        role: str,
+        message: str,
+    ) -> str:
+        message_id = str(uuid.uuid4())
+        now = utc_now()
+
+        with self._connect() as conn:
+            conn.execute(
+                """
+                INSERT INTO agent_chat_messages
+                (message_id, agent_name, user_id, role, message, created_at)
+                VALUES (?, ?, ?, ?, ?, ?)
+                """,
+                (
+                    message_id,
+                    agent_name,
+                    user_id,
+                    role,
+                    message,
+                    now,
+                ),
+            )
+
+        return message_id
+
+    def list_chat_messages(
+        self,
+        agent_name: str,
+        user_id: str | None = None,
+        *,
+        limit: int = 25,
+    ) -> list[dict[str, Any]]:
+        query = """
+            SELECT agent_name, user_id, role, message, created_at
+            FROM agent_chat_messages
+            WHERE agent_name = ?
+        """
+        params: tuple[Any, ...] = (agent_name,)
+
+        if user_id is not None:
+            query += " AND user_id = ?"
+            params = (agent_name, user_id)
+
+        query += " ORDER BY created_at ASC LIMIT ?"
+        params = params + (limit,)
+
+        with self._connect() as conn:
+            rows = conn.execute(query, params).fetchall()
+
+        return [dict(row) for row in rows]
+
+    def list_agent_tools(
+        self,
+        agent_name: str,
+    ) -> list[str]:
+        with self._connect() as conn:
+            rows = conn.execute(
+                """
+                SELECT tool_name, enabled
+                FROM agent_tool_registry
+                WHERE agent_name = ?
+                ORDER BY tool_name ASC
+                """,
+                (agent_name,),
+            ).fetchall()
+
+        return [
+            row["tool_name"]
+            for row in rows
+            if row["enabled"]
+        ]
+
+    def set_agent_tool(
+        self,
+        agent_name: str,
+        tool_name: str,
+        enabled: bool,
+    ) -> None:
+        now = utc_now()
+        with self._connect() as conn:
+            conn.execute(
+                """
+                INSERT INTO agent_tool_registry
+                (agent_name, tool_name, enabled, updated_at)
+                VALUES (?, ?, ?, ?)
+                ON CONFLICT(agent_name, tool_name)
+                DO UPDATE SET enabled = excluded.enabled, updated_at = excluded.updated_at
+                """,
+                (
+                    agent_name,
+                    tool_name,
+                    1 if enabled else 0,
+                    now,
+                ),
+            )
+
+    def add_rag_document(
+        self,
+        title: str,
+        content: str,
+        *,
+        source: str = "uploaded",
+    ) -> str:
+        doc_id = str(uuid.uuid4())
+        now = utc_now()
+
+        with self._connect() as conn:
+            conn.execute(
+                """
+                INSERT INTO rag_documents
+                (document_id, title, content, source, created_at)
+                VALUES (?, ?, ?, ?, ?)
+                """,
+                (
+                    doc_id,
+                    title,
+                    content,
+                    source,
+                    now,
+                ),
+            )
+
+        return doc_id
+
+    def list_rag_documents(
+        self,
+    ) -> list[dict[str, Any]]:
+        with self._connect() as conn:
+            rows = conn.execute(
+                """
+                SELECT document_id, title, content, source, created_at
+                FROM rag_documents
+                ORDER BY created_at DESC
+                """
+            ).fetchall()
+
+        return [dict(row) for row in rows]
+
+    def remove_rag_document(
+        self,
+        document_id: str,
+    ) -> bool:
+        with self._connect() as conn:
+            cursor = conn.execute(
+                "DELETE FROM rag_documents WHERE document_id = ?",
+                (document_id,),
+            )
+
+        return cursor.rowcount > 0
 
     # =========================================================
     # HITL

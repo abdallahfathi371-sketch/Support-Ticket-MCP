@@ -1,4 +1,6 @@
 import sqlite3
+import subprocess
+import sys
 from pathlib import Path
 
 
@@ -9,8 +11,38 @@ DB_PATH = (
 )
 
 
+def ensure_support_db() -> None:
+    if not DB_PATH.exists():
+        subprocess.run(
+            [sys.executable, str(Path(__file__).resolve().parent.parent / "db" / "create_db.py")],
+            check=False,
+            capture_output=True,
+            text=True,
+        )
+        return
+
+    with sqlite3.connect(DB_PATH) as conn:
+        tables = {
+            row[0]
+            for row in conn.execute(
+                "SELECT name FROM sqlite_master WHERE type='table'"
+            ).fetchall()
+        }
+
+    if not {"employees", "teams", "tickets"}.issubset(tables):
+        subprocess.run(
+            [sys.executable, str(Path(__file__).resolve().parent.parent / "db" / "create_db.py")],
+            check=False,
+            capture_output=True,
+            text=True,
+        )
+
+
+ensure_support_db()
+
 
 def get_connection():
+    ensure_support_db()
 
     conn = sqlite3.connect(
         DB_PATH
