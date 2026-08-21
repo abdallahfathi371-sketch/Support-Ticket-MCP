@@ -1,5 +1,12 @@
 import sqlite3
+import sys
 from pathlib import Path
+
+ROOT_DIR = Path(__file__).resolve().parent.parent
+if str(ROOT_DIR) not in sys.path:
+    sys.path.insert(0, str(ROOT_DIR))
+
+from state_graph.common.store import StateStore
 
 BASE_DIR = Path(__file__).parent
 
@@ -20,5 +27,7 @@ with open(seed_path, "r", encoding="utf-8") as f:
 
 conn.commit()
 conn.close()
+
+StateStore(db_path)
 
 print("Database created successfully!")

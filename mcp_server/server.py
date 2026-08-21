@@ -16,7 +16,7 @@ except Exception as e:
 
 if __name__ == "__main__":
     mcp.run(
-        transport="http",
+        transport="streamable-http",
         host="127.0.0.1",
         port=8000,
     )

@@ -197,11 +197,25 @@ Shared durable state (Member 2 infrastructure): `state_graph/common/`
 | Customer Follow-up | Member 2 | `state_graph/graphs/customer_followup.py` |
 | Failure Recovery | Member 2 | `state_graph/graphs/failure_recovery.py` |
 | **SLA Breach Escalation** | **Member 1** | `state_graph/graphs/sla_breach_escalation.py` |
+| **Insurance Claim Appeal** | **Platform / State Graph #3** | `state_graph/graphs/claim_appeal.py` |
 
 Member 1 details: `state_graph/README_MEMBER1.md`  
-Member 2 details: `state_graph/README_MEMBER2.md`
+Member 2 details: `state_graph/README_MEMBER2.md`  
+Member 3 / Platform details: `state_graph/README_MEMBER3.md` and `platform/server.py`
 
 ```bash
 python demo_member1.py
 python -m pytest state_graph/tests/test_sla_breach_escalation.py state_graph/tests/test_sla_breach_restart.py -q
+python -m platform_app.server
 ```
+
+### Platform and agent switching
+
+The repository now includes a local platform server that exposes:
+
+- a user chat surface with selectable agents
+- a live admin view for tool toggles and RAG document management
+- HITL task review and failure ticket resolution
+- a durable state-graph chain for claim appeals and escalations
+
+This adds the missing runtime product surface required for the final project role.
