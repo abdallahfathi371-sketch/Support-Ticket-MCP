@@ -97,7 +97,8 @@ class MCPClient:
     async def update_ticket_status(
         self,
         ticket_id: int,
-        status: str
+        status: str,
+        approved: bool = False,
     ):
 
         async with self.client:
@@ -107,7 +108,8 @@ class MCPClient:
                 {
                     "employee_id": 1,
                     "ticket_id": ticket_id,
-                    "status": status
+                    "status": status,
+                    "approved": approved,
                 }
             )
 

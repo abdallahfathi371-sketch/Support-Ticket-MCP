@@ -8,7 +8,7 @@ PERMISSIONS = {
         "search_by_team",
         "update_ticket_status",
         "generate_report",
-        "dashboard",
+        "dashboard_tool",
         "search_knowledge",
     ],
     "support": [

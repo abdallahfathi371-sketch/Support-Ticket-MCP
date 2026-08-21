@@ -185,3 +185,23 @@ Demo and reproducible runs
 Credits
 
 Abdallah Fathi
+
+---
+
+## Final Project — State Graphs
+
+Shared durable state (Member 2 infrastructure): `state_graph/common/`
+
+| Graph | Owner | Folder |
+|---|---|---|
+| Customer Follow-up | Member 2 | `state_graph/graphs/customer_followup.py` |
+| Failure Recovery | Member 2 | `state_graph/graphs/failure_recovery.py` |
+| **SLA Breach Escalation** | **Member 1** | `state_graph/graphs/sla_breach_escalation.py` |
+
+Member 1 details: `state_graph/README_MEMBER1.md`  
+Member 2 details: `state_graph/README_MEMBER2.md`
+
+```bash
+python demo_member1.py
+python -m pytest state_graph/tests/test_sla_breach_escalation.py state_graph/tests/test_sla_breach_restart.py -q
+```
