@@ -273,3 +273,75 @@ def db_update_ticket_status(
 
 
     return updated
+
+
+def ensure_ticket_status_logs_table() -> None:
+    """
+    Idempotent prior-lab schema fix for existing databases.
+    """
+
+    conn = get_connection()
+    cursor = conn.cursor()
+
+    cursor.execute(
+        """
+        CREATE TABLE IF NOT EXISTS ticket_status_logs (
+            log_id INTEGER PRIMARY KEY AUTOINCREMENT,
+            ticket_id INTEGER NOT NULL,
+            employee_id INTEGER NOT NULL,
+            old_status TEXT NOT NULL,
+            new_status TEXT NOT NULL,
+            created_at TEXT NOT NULL,
+            FOREIGN KEY(ticket_id)
+                REFERENCES tickets(ticket_id),
+            FOREIGN KEY(employee_id)
+                REFERENCES employees(employee_id)
+        )
+        """
+    )
+
+    conn.commit()
+    conn.close()
+
+
+def log_ticket_status_change(
+    *,
+    ticket_id: int,
+    employee_id: int,
+    old_status: str,
+    new_status: str,
+) -> None:
+    """
+    Persist an audit row for every ticket status update.
+    """
+
+    from datetime import datetime, timezone
+
+    ensure_ticket_status_logs_table()
+
+    conn = get_connection()
+    cursor = conn.cursor()
+
+    cursor.execute(
+        """
+        INSERT INTO ticket_status_logs
+        (
+            ticket_id,
+            employee_id,
+            old_status,
+            new_status,
+            created_at
+        )
+        VALUES (?, ?, ?, ?, ?)
+        """,
+        (
+            ticket_id,
+            employee_id,
+            old_status,
+            new_status,
+            datetime.now(timezone.utc).isoformat(),
+        ),
+    )
+
+    conn.commit()
+    conn.close()

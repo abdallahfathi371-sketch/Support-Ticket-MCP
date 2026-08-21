@@ -8,7 +8,7 @@ def test_rag():
 
     for result in results:
         print("Document:", result["metadata"]["document"])
-        print(result["payload"])
+        print(result["text"])
         print("-" * 50)
 
 

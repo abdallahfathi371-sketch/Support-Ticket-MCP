@@ -1,4 +1,5 @@
 from .app import mcp
+from .authorization import authorize
 from .database import get_connection
 
 
@@ -11,6 +12,8 @@ def get_ticket(
     employee_id: int,
     ticket_id: int
 ):
+
+    authorize(employee_id, "get_ticket")
 
     conn = get_connection()
     cursor = conn.cursor()
@@ -59,6 +62,8 @@ def search_open_tickets(
     employee_id: int
 ):
 
+    authorize(employee_id, "search_open_tickets")
+
     conn = get_connection()
     cursor = conn.cursor()
 
@@ -99,6 +104,8 @@ def search_by_team(
     employee_id: int,
     team_name: str
 ):
+
+    authorize(employee_id, "search_by_team")
 
     conn = get_connection()
     cursor = conn.cursor()
@@ -144,41 +151,90 @@ def search_by_team(
 def update_ticket_status(
     employee_id: int,
     ticket_id: int,
-    status: str
+    status: str,
+    approved: bool = False,
 ):
+    """
+    Update a ticket status.
+
+    Prior-lab policy enforcement:
+    - authorize the employee
+    - validate allowed status values
+    - High-priority Close requires approved=True (elicitation otherwise)
+    - Closed tickets cannot be reopened without approved=True
+    - every successful update is written to ticket_status_logs
+    """
+
+    from .database import log_ticket_status_change
+    from .notifications import ticket_status_changed
+    from .validation import validate_choice
+
+    authorize(employee_id, "update_ticket_status")
+
+    validate_choice(
+        status,
+        ["Open", "Pending", "Closed"],
+        "status",
+    )
 
     conn = get_connection()
     cursor = conn.cursor()
 
-
     cursor.execute(
         """
-        SELECT priority,status
+        SELECT priority, status
         FROM tickets
         WHERE ticket_id = ?
         """,
-        (ticket_id,)
+        (ticket_id,),
     )
 
     ticket = cursor.fetchone()
-
 
     if ticket is None:
         conn.close()
 
         return {
             "success": False,
-            "message": "Ticket not found"
+            "message": "Ticket not found",
         }
 
+    old_status = ticket["status"]
 
+    # Policy: Closed tickets cannot be reopened without manager approval.
+    if (
+        old_status == "Closed"
+        and status in {"Open", "Pending"}
+        and not approved
+    ):
+        conn.close()
 
-    # Human approval for High priority closing
+        return {
+            "success": False,
+            "message": "Human approval required.",
+            "elicitation": {
+                "type": "elicitation/create",
+                "status": "waiting_for_confirmation",
+                "action": "reopen_closed_ticket",
+                "details": {
+                    "ticket_id": ticket_id,
+                    "old_status": old_status,
+                    "requested_status": status,
+                    "priority": ticket["priority"],
+                },
+                "message": (
+                    "Closed tickets cannot be reopened without "
+                    "manager approval. Retry with approved=true."
+                ),
+            },
+        }
+
+    # Policy: High priority closing needs human approval.
     if (
         status == "Closed"
         and ticket["priority"] == "High"
+        and not approved
     ):
-
         conn.close()
 
         return {
@@ -191,14 +247,14 @@ def update_ticket_status(
                 "details": {
                     "ticket_id": ticket_id,
                     "priority": ticket["priority"],
-                    "old_status": ticket["status"]
+                    "old_status": old_status,
                 },
-                "message":
-                "Human approval is required before continuing."
-            }
+                "message": (
+                    "Human approval is required before closing a "
+                    "High priority ticket. Retry with approved=true."
+                ),
+            },
         }
-
-
 
     cursor.execute(
         """
@@ -208,19 +264,33 @@ def update_ticket_status(
         """,
         (
             status,
-            ticket_id
-        )
+            ticket_id,
+        ),
     )
 
     conn.commit()
     conn.close()
 
+    log_ticket_status_change(
+        ticket_id=ticket_id,
+        employee_id=employee_id,
+        old_status=old_status,
+        new_status=status,
+    )
+
+    notification = ticket_status_changed(
+        ticket_id,
+        old_status,
+        status,
+    )
 
     return {
         "success": True,
         "message": "Ticket status updated",
         "ticket_id": ticket_id,
-        "new_status": status
+        "old_status": old_status,
+        "new_status": status,
+        "notification": notification,
     }
 
 
@@ -233,6 +303,8 @@ def update_ticket_status(
 def generate_report(
     employee_id: int
 ):
+
+    authorize(employee_id, "generate_report")
 
     conn = get_connection()
     cursor = conn.cursor()
@@ -297,6 +369,8 @@ def generate_report(
 def dashboard_tool(
     employee_id: int
 ):
+
+    authorize(employee_id, "dashboard_tool")
 
     conn = get_connection()
     cursor = conn.cursor()

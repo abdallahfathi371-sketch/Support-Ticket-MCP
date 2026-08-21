@@ -207,6 +207,22 @@ class ConstrainedMCPReAct:
                     "steps": steps,
                 }
 
+            # Nested MCP tool payloads may report success=False
+            # (elicitation, not found, authorization) without raising.
+            data = result.get("data")
+            if isinstance(data, dict) and data.get("success") is False:
+                return {
+                    "success": False,
+                    "failed_action": tool_name,
+                    "error": str(
+                        data.get("message")
+                        or data.get("error")
+                        or "MCP tool reported success=False"
+                    ),
+                    "steps": steps,
+                    "elicitation": data.get("elicitation"),
+                }
+
         return {
             "success": True,
             "steps": steps,

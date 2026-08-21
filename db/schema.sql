@@ -88,3 +88,27 @@ CREATE TABLE tickets(
         REFERENCES teams(team_id)
 
 );
+
+
+-- Prior-lab fix: every ticket status update must be logged
+-- (Coderift ticket_policy.txt rule 7).
+CREATE TABLE IF NOT EXISTS ticket_status_logs (
+
+    log_id INTEGER PRIMARY KEY AUTOINCREMENT,
+
+    ticket_id INTEGER NOT NULL,
+
+    employee_id INTEGER NOT NULL,
+
+    old_status TEXT NOT NULL,
+
+    new_status TEXT NOT NULL,
+
+    created_at TEXT NOT NULL,
+
+    FOREIGN KEY(ticket_id)
+        REFERENCES tickets(ticket_id),
+
+    FOREIGN KEY(employee_id)
+        REFERENCES employees(employee_id)
+);
